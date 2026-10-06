@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio | IMRAN Website Solutions</title>
+    <meta name="description"
+        content="Explore selected websites designed and developed by IMRAN Website Solutions for businesses, eCommerce brands and professionals.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="main-header">
+        <a href="index.html" class="logo"><strong>IMRAN</strong></a>
+
+        <nav class="desktop-nav">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="portfolio.html" class="active">Portfolio</a>
+            <a href="index.html#testimonials">Testimonials</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="header-cta">
+            <a href="index.html#contact" class="btn-header">Free Consultation</a>
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE NAV -->
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html#home" onclick="closeMobileNav()">Home</a>
+        <a href="index.html#about" onclick="closeMobileNav()">About</a>
+        <a href="index.html#services" onclick="closeMobileNav()">Services</a>
+        <a href="portfolio.html" onclick="closeMobileNav()">Portfolio</a>
+        <a href="index.html#testimonials" onclick="closeMobileNav()">Testimonials</a>
+        <a href="index.html#contact" onclick="closeMobileNav()">Contact</a>
+    </nav>
+
+    <main>
+
+        <!-- PORTFOLIO HERO -->
+        <section class="portfolio-hero">
+            <div class="container">
+                <div class="section_title center reveal">
+                    <h2>MY WORKS</h2>
+                    <h3>PORTFOLIO</h3>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- PROJECTS -->
+        <section class="portfolio-projects reveal reveal-delay-2">
+            <div class="container">
+
+                <div class="portfolio-filter-wrap">
+                    <div class="portfolio-filters" role="group" aria-label="Filter projects">
+                        <button class="portfolio-filter active" data-filter="all">All</button>
+                        <button class="portfolio-filter" data-filter="business">Business Website</button>
+                        <button class="portfolio-filter" data-filter="ecommerce">eCommerce</button>
+                        <button class="portfolio-filter" data-filter="blog">Blog / News</button>
+                        <button class="portfolio-filter" data-filter="portfolio">Portfolio</button>
+                        <button class="portfolio-filter" data-filter="redesign">Redesign</button>
+                        <button class="portfolio-filter" data-filter="maintenance">Maintenance</button>
+                        <button class="portfolio-filter" data-filter="fixes">Website Fixes</button>
+                    </div>
+
+                    <span class="portfolio-count"><strong id="project-count">4</strong> Projects</span>
+                </div>
+
+                <div class="portfolio-grid" id="portfolio-grid">
+
+                    <!-- PROJECT 01 -->
+                    <a href="project-holy-estates.html" class="portfolio-card reveal" data-category="business">
+                        <div class="portfolio-card-image">
+                            <img src="img/th1.png" alt="Holy Estates website project" loading="lazy">
+                            <span class="portfolio-card-arrow" aria-hidden="true">↗</span>
+                        </div>
+                        <div class="portfolio-card-content">
+                            <span class="portfolio-category">Business Website</span>
+                            <h2>Holy Estates</h2>
+                            <p>Modern corporate website for a real estate business.</p>
+                        </div>
+                    </a>
+
+                    <!-- PROJECT 02 -->
+                    <a href="project-qbpn.html" class="portfolio-card reveal reveal-delay-1" data-category="ecommerce">
+                        <div class="portfolio-card-image">
+                            <img src="img/th8.png" alt="QBPN eCommerce website project" loading="lazy">
+                            <span class="portfolio-card-arrow" aria-hidden="true">↗</span>
+                        </div>
+                        <div class="portfolio-card-content">
+                            <span class="portfolio-category">eCommerce</span>
+                            <h2>QBPN</h2>
+                            <p>Online store designed for a clean shopping experience.</p>
+                        </div>
+                    </a>
+
+                    <!-- PROJECT 03 -->
+                    <a href="project-james-stanley.html" class="portfolio-card reveal reveal-delay-2" data-category="portfolio">
+                        <div class="portfolio-card-image">
+                            <img src="img/th3.png" alt="James Stanley portfolio website project" loading="lazy">
+                            <span class="portfolio-card-arrow" aria-hidden="true">↗</span>
+                        </div>
+                        <div class="portfolio-card-content">
+                            <span class="portfolio-category">Portfolio</span>
+                            <h2>James Stanley</h2>
+                            <p>Personal portfolio website with a focused presentation.</p>
+                        </div>
+                    </a>
+
+                    <!-- PROJECT 04 -->
+                    <a href="project-04.html" class="portfolio-card reveal" data-category="business">
+                        <div class="portfolio-card-image">
+                            <img src="img/th10.png" alt="Website project preview" loading="lazy">
+                            <span class="portfolio-card-arrow" aria-hidden="true">↗</span>
+                        </div>
+                        <div class="portfolio-card-content">
+                            <span class="portfolio-category">Business Website</span>
+                            <h2>Featured Project</h2>
+                            <p>A professional website built around the client's business goals.</p>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="portfolio-empty" id="portfolio-empty">
+                    <span>No projects in this category yet.</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- VIDEO TESTIMONIALS -->
+        <section class="ts-section portfolio-testimonials" id="testimonials">
+            <div class="container">
+
+                <div class="reveal testi_top">
+                    <div class="section_title">
+                        <h2>TESTIMONIALS</h2>
+                        <h3>VIDEO REVIEWS</h3>
+                    </div>
+
+                    <div class="ts-cta show-pc">
+                        <a href="https://www.fiverr.com/imran8858" target="_blank" rel="noopener noreferrer"
+                            class="ts-fiverr-btn">
+                            Text Reviews &nbsp;→
+                        </a>
+                    </div>
+                </div>
+
+                <div class="ts-video-row">
+
+                    <div class="ts-vcard ts-vcard--up" data-video-id="QBNyW4rfUPY">
+                        <div class="ts-thumb-wrap">
+                            <img class="ts-thumb"
+                                src="https://img.youtube.com/vi/QBNyW4rfUPY/mqdefault.jpg"
+                                alt="Client video testimonial" loading="lazy">
+                            <button class="ts-play" aria-label="Play testimonial video">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                                    <path d="M8 5.14v14l11-7-11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ts-vcard ts-vcard--mid" data-video-id="U9197Rx8Uc8">
+                        <div class="ts-thumb-wrap">
+                            <img class="ts-thumb"
+                                src="https://img.youtube.com/vi/U9197Rx8Uc8/mqdefault.jpg"
+                                alt="Client video testimonial" loading="lazy">
+                            <button class="ts-play" aria-label="Play testimonial video">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                                    <path d="M8 5.14v14l11-7-11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ts-vcard ts-vcard--up" data-video-id="dQw4w9WgXcQ">
+                        <div class="ts-thumb-wrap">
+                            <img class="ts-thumb"
+                                src="https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg"
+                                alt="Client video testimonial" loading="lazy">
+                            <button class="ts-play" aria-label="Play testimonial video">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                                    <path d="M8 5.14v14l11-7-11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="ts-cta show-phone">
+                    <a href="https://www.fiverr.com/imran8858" target="_blank" rel="noopener noreferrer"
+                        class="ts-fiverr-btn">
+                        Text Reviews &nbsp;→
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- VIDEO MODAL -->
+    <div class="portfolio-video-modal" id="portfolio-video-modal" aria-hidden="true">
+        <div class="portfolio-video-backdrop" id="portfolio-video-backdrop"></div>
+        <div class="portfolio-video-dialog" role="dialog" aria-modal="true" aria-label="Client testimonial video">
+            <button class="portfolio-video-close" id="portfolio-video-close" aria-label="Close video">×</button>
+            <iframe id="portfolio-video-iframe" src="" title="Client testimonial video"
+                allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+        <!-- Video modal already exists, this is the REVIEWS modal -->
+    <div class="rv-modal" id="rvModal" role="dialog" aria-modal="true" aria-label="Fiverr Reviews">
+        <div class="rv-modal-bg" id="rvModalBg"></div>
+        <div class="rv-modal-box">
+            <div class="rv-modal-head">
+                <div>
+                    <p class="rv-modal-label">★★★★★ &nbsp; Fiverr Reviews</p>
+                    <h3 class="rv-modal-title">What clients say</h3>
+                </div>
+                <button class="rv-modal-close" id="rvModalClose" aria-label="Close reviews">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18"
+                        height="18">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <div class="rv-list">
+                <div class="rv-item">
+                    <div class="rv-item-top">
+                        <div class="rv-avatar">JD</div>
+                        <div>
+                            <p class="rv-name">James D.</p>
+                            <p class="rv-stars">★★★★★</p>
+                        </div>
+                    </div>
+                    <p class="rv-text">"Imran delivered an outstanding website. Fast, clean, and exactly what I needed.
+                        Communication was smooth and he went beyond expectations."</p>
+                </div>
+                <div class="rv-item">
+                    <div class="rv-item-top">
+                        <div class="rv-avatar">AM</div>
+                        <div>
+                            <p class="rv-name">Amanda M.</p>
+                            <p class="rv-stars">★★★★★</p>
+                        </div>
+                    </div>
+                    <p class="rv-text">"Professional, reliable and talented. My eCommerce store looks amazing and loads
+                        super fast. Will definitely hire again!"</p>
+                </div>
+                <div class="rv-item">
+                    <div class="rv-item-top">
+                        <div class="rv-avatar">RK</div>
+                        <div>
+                            <p class="rv-name">Robert K.</p>
+                            <p class="rv-stars">★★★★★</p>
+                        </div>
+                    </div>
+                    <p class="rv-text">"Best WordPress developer on Fiverr. He understood my requirements perfectly and
+                        delivered on time with zero revisions needed."</p>
+                </div>
+                <div class="rv-item">
+                    <div class="rv-item-top">
+                        <div class="rv-avatar">PL</div>
+                        <div>
+                            <p class="rv-name">Patricia L.</p>
+                            <p class="rv-stars">★★★★★</p>
+                        </div>
+                    </div>
+                    <p class="rv-text">"Incredibly fast turnaround. The site is modern, responsive, and our customers
+                        love it. Highly recommended for any serious business."</p>
+                </div>
+                <div class="rv-item">
+                    <div class="rv-item-top">
+                        <div class="rv-avatar">DR</div>
+                        <div>
+                            <p class="rv-name">David R.</p>
+                            <p class="rv-stars">★★★★★</p>
+                        </div>
+                    </div>
+                    <p class="rv-text">"Great experience from start to finish. Imran is patient, skilled, and truly
+                        understands what a good website should do for your brand."</p>
+                </div>
+                <div class="rv-item">
+                    <div class="rv-item-top">
+                        <div class="rv-avatar">NT</div>
+                        <div>
+                            <p class="rv-name">Nina T.</p>
+                            <p class="rv-stars">★★★★★</p>
+                        </div>
+                    </div>
+                    <p class="rv-text">"The redesign completely transformed our online presence. Visitors now stay
+                        longer and we've seen a real increase in inquiries. Excellent work."</p>
+                </div>
+            </div>
+            <div class="rv-modal-footer">
+                <a href="https://www.fiverr.com/imran8858" target="_blank" rel="noopener noreferrer"
+                    class="rv-fiverr-btn">
+                    More Reviews on Fiverr &nbsp;→
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html#home" class="footer-logo">IMRAN</a>
+                    <p class="footer-text">Modern websites built to help brands, businesses and professionals grow
+                        online.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="index.html#portfolio">Portfolio</a>
+                    <a href="testimonials.html">Testimonials</a>
+                </div>
+                <div class="footer-cta"><a href="index.html#contact" class="footer-btn">Free Consultation</a></div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Imran. All rights reserved.</span>
+                <div class="footer-social">
+                    <ul>
+                        <li><a href="https://wa.me/8801885078858" target="_blank">
+                                <span class="cm-icon"><svg role="img" style="height: 19px; width: 19px; fill: #a4a4a4;"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <title>WhatsApp</title>
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z">
+                                        </path>
+                                    </svg></span>
+                            </a></li>
+                        <li><a href="https://www.facebook.com/imrancoder/" target="_blank">
+                                <span class="cm-icon"><svg width="30px" height="30px" viewBox="-5 0 20 20" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Dribbble-Light-Preview"
+                                                transform="translate(-385.000000, -7399.000000)" fill="#139ef8"
+                                                style="fill: #a4a4a4;">
+                                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                    <path
+                                                        d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z"
+                                                        id="facebook-[#176]">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg></span>
+                            </a></li>
+                        <li><a href="https://www.facebook.com/imrancoder/" target="_blank">
+                                <span class="cm-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #a4a4a4;" width="30"
+                                        height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-mail-icon lucide-mail">
+                                        <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                    </svg>
+                                </span>
+                            </a></li>
+                        <li><a href="https://www.linkedin.com/in/imran-coder/" target="_blank">
+                                <span class="cm-icon">
+                                    <svg width="30px" height="30px" viewBox="0 -2 44 44" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Color-" transform="translate(-702.000000, -265.000000)"
+                                                fill="#007EBB" style="fill: #a4a4a4;">
+                                                <path
+                                                    d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z"
+                                                    id="LinkedIn">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Start -->
+    <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg width="20px" height="20px" viewBox="0 0 1024 1024" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M903.232 768l56.768-50.432L512 256l-448 461.568 56.768 50.432L512 364.928z" fill="#fff" /></svg></button>
+
+    <script src="../script.js"></script>
+
+    <!-- PAGE-SPECIFIC JS -->
+    <script>
+        // Mobile navigation close
+        function closeMobileNav() {
+            const nav = document.getElementById('mobile-nav');
+            const menu = document.getElementById('hamburger');
+
+            if (nav) nav.classList.remove('open');
+            if (menu) menu.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        // Portfolio category filter
+        const filterButtons = document.querySelectorAll('.portfolio-filter');
+        const projectCards = document.querySelectorAll('.portfolio-card');
+        const projectCount = document.getElementById('project-count');
+        const emptyState = document.getElementById('portfolio-empty');
+
+        function filterProjects(category) {
+            let visibleCount = 0;
+
+            projectCards.forEach(card => {
+                const matches = category === 'all' || card.dataset.category === category;
+
+                if (matches) {
+                    card.classList.remove('is-hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('is-hidden');
+                }
+            });
+
+            projectCount.textContent = visibleCount;
+            emptyState.classList.toggle('show', visibleCount === 0);
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                filterProjects(button.dataset.filter);
+            });
+        });
+
+        // Testimonial video modal
+        const videoModal = document.getElementById('portfolio-video-modal');
+        const videoBackdrop = document.getElementById('portfolio-video-backdrop');
+        const videoClose = document.getElementById('portfolio-video-close');
+        const videoIframe = document.getElementById('portfolio-video-iframe');
+
+        function openPortfolioVideo(videoId) {
+            videoIframe.src =
+                'https://www.youtube.com/embed/' +
+                videoId +
+                '?autoplay=1&rel=0&modestbranding=1';
+
+            videoModal.classList.add('open');
+            videoModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePortfolioVideo() {
+            videoModal.classList.remove('open');
+            videoModal.setAttribute('aria-hidden', 'true');
+            videoIframe.src = '';
+            document.body.style.overflow = '';
+        }
+
+        document.querySelectorAll('.ts-vcard').forEach(card => {
+            card.addEventListener('click', () => {
+                const videoId = card.dataset.videoId;
+                if (videoId) openPortfolioVideo(videoId);
+            });
+        });
+
+        videoBackdrop.addEventListener('click', closePortfolioVideo);
+        videoClose.addEventListener('click', closePortfolioVideo);
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') {
+                closePortfolioVideo();
+            }
+        });
+    </script>
+
+</body>
+</html>

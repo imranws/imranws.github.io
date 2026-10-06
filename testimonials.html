@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials | IMRAN Website Solutions</title>
+    <meta name="description" content="Real client testimonials and video reviews from IMRAN Website Solutions.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="IMRAN Website Solutions">
+    <link rel="canonical" href="https://imranwdev.github.io/testimonials.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Testimonials | IMRAN Website Solutions">
+    <meta property="og:description" content="Real client testimonials and video reviews from IMRAN Website Solutions.">
+    <meta property="og:url" content="https://imranwdev.github.io/testimonials.html">
+    <meta property="og:site_name" content="IMRAN Website Solutions">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Testimonials | IMRAN Website Solutions">
+    <meta name="twitter:description" content="Real client testimonials and video reviews from IMRAN Website Solutions.">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .testimonials-page .ts-page {
+            padding-top: 230px
+        }
+
+        .testimonials-page .ts-page-intro {
+            max-width: 760px;
+            margin: 0 auto 55px;
+            text-align: center
+        }
+
+        .testimonials-page .ts-page-intro p {
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .testimonials-page .ts-video-row {
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+
+        .testimonials-page .ts-reviews-head {
+            margin-bottom: 28px
+        }
+
+        .testimonials-page .rv-list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            height: auto
+        }
+
+        .testimonials-page .rv-item {
+            width: auto;
+            border: 1px solid rgba(255, 255, 255, .1);
+            border-radius: 15px;
+        }
+
+        .testimonials-page .rv-fiverr-wrap {
+            display: flex;
+            justify-content: center;
+            margin: 32px 0;
+        }
+
+        .testimonials-page .ts-cta {
+            margin: 0 0 90px
+        }
+
+        .testimonials-page .ts-cta-box {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+            padding: 48px 42px;
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 18px;
+            background: rgba(255, 255, 255, .018)
+        }
+
+        .testimonials-page .ts-cta-box:before,
+        .testimonials-page .ts-cta-box:after {
+            content: "";
+            position: absolute;
+            width: 170px;
+            height: 170px;
+            border: 1px solid rgba(255, 255, 255, .055);
+            border-radius: 50%;
+            pointer-events: none
+        }
+
+        .testimonials-page .ts-cta-box:before {
+            left: -115px;
+            bottom: -120px
+        }
+
+        .testimonials-page .ts-cta-box:after {
+            right: -115px;
+            top: -120px
+        }
+
+        .testimonials-page .ts-cta-copy,
+        .testimonials-page .ts-cta-btn {
+            position: relative;
+            z-index: 1
+        }
+
+        .testimonials-page .ts-cta-label {
+            margin: 0 0 10px;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: .72
+        }
+
+        .testimonials-page .ts-cta-title {
+            margin: 0 0 8px;
+            font-size: clamp(28px, 3vw, 42px);
+            line-height: 1.12
+        }
+
+        .testimonials-page .ts-cta-text {
+            margin: 0;
+            opacity: .72
+        }
+
+        @media(max-width:767px) {
+
+
+            .testimonials-page .ts-page {
+                padding-top: 140px
+            }
+
+            .testimonials-page .ts-page-intro {
+                margin-bottom: 42px
+            }
+
+            .testimonials-page .ts-page-intro p br {
+                display: none
+            }
+
+            .testimonials-page .ts-video-row {
+                margin-bottom: 58px
+            }
+
+            .testimonials-page .rv-list {
+                grid-template-columns: 1fr;
+                gap: 16px
+            }
+
+            .testimonials-page .rv-fiverr-wrap {
+                margin: 28px 0 65px
+            }
+
+            .testimonials-page .ts-cta {
+                margin-bottom: 65px
+            }
+
+            .testimonials-page .ts-cta-box {
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 35px 26px;
+                gap: 25px
+            }
+
+            .testimonials-page .ts-cta-btn {
+                width: 100%
+            }
+        }
+    </style>
+</head>
+
+<body class="testimonials-page">
+
+    <header id="main-header">
+        <a href="index.html#home" class="logo"><strong>IMRAN</strong></a>
+        <nav class="desktop-nav">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="testimonials.html" class="active">Testimonials</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="header-cta">
+            <a href="index.html#contact" class="btn-header">Free Consultation</a>
+            <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html#home" onclick="closeMobileNav()">Home</a>
+        <a href="index.html#about" onclick="closeMobileNav()">About</a>
+        <a href="index.html#services" onclick="closeMobileNav()">Services</a>
+        <a href="index.html#portfolio" onclick="closeMobileNav()">Portfolio</a>
+        <a href="testimonials.html" onclick="closeMobileNav()">Testimonials</a>
+        <a href="index.html#contact" onclick="closeMobileNav()">Contact</a>
+    </nav>
+
+    <main class="ts-page single-page-top-space">
+        <div class="container">
+            <div class="section_title center ts-page-intro reveal">
+                <h2>TESTIMONIALS</h2>
+                <h3>Reviews</h3>
+                <p>Real feedback from clients I've worked with on website development,<br> custom features, fixes, and eCommerce projects.
+                </p>
+            </div>
+
+            <!-- VIDEO TESTIMONIALS — staggered cinematic layout -->
+            <div class="ts-video-row reveal-delay-2 reveal">
+                <div class="ts-vcard ts-vcard--up" data-video-id="STKqXZsF4sI">
+                    <div class="ts-thumb-wrap">
+                        <img class="ts-thumb" src="https://img.youtube.com/vi/STKqXZsF4sI/maxresdefault.jpg"
+                            alt="Testimonial video - Mohan" loading="lazy" />
+                        <div class="ts-overlay"></div>
+                        <button class="ts-play" aria-label="Play video">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                                <path d="M8 5.14v14l11-7-11-7z" />
+                            </svg>
+                        </button>
+                        <!-- <div class="ts-vcard-label">
+                            <p class="ts-vname">Mohan</p>
+                            <p class="ts-vrole">Consultancy Business Owner</p>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="ts-vcard ts-vcard--up" data-video-id="QBNyW4rfUPY">
+                    <div class="ts-thumb-wrap">
+                        <img class="ts-thumb" src="https://img.youtube.com/vi/QBNyW4rfUPY/mqdefault.jpg"
+                            alt="Testimonial video - Chase Francis" loading="lazy" />
+                        <!-- <div class="ts-overlay"></div> -->
+                        <button class="ts-play" aria-label="Play video">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                                <path d="M8 5.14v14l11-7-11-7z" />
+                            </svg>
+                        </button>
+                        <!-- <div class="ts-vcard-label">
+                            <p class="ts-vname">Chase Francis</p>
+                            <p class="ts-vrole">CFGroove Digital Agency</p>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="ts-vcard ts-vcard--mid" data-video-id="U9197Rx8Uc8">
+                    <div class="ts-thumb-wrap">
+                        <img class="ts-thumb" src="https://img.youtube.com/vi/U9197Rx8Uc8/mqdefault.jpg"
+                            alt="Testimonial video - Maus" loading="lazy" />
+                        <!-- <div class="ts-overlay"></div> -->
+                        <button class="ts-play" aria-label="Play video">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                                <path d="M8 5.14v14l11-7-11-7z" />
+                            </svg>
+                        </button>
+                        <!-- <div class="ts-vcard-label">
+                            <p class="ts-vname">Maus</p>
+                            <p class="ts-vrole">Beat Valhalla</p>
+                        </div> -->
+                    </div>
+                </div>
+
+            </div>
+
+
+            <section class="ts-reviews-section">
+                <div class="section_title ts-reviews-head reveal">
+                    <h2>CLIENT REVIEWS</h2>
+                    <h3>Text Review</h3>
+                </div>
+
+                <div class="rv-section-box reveal">
+                    <div class="rv-list">
+                        <div class="rv-item">
+                            <div class="rv-item-top">
+                                <div class="rv-avatar">JD</div>
+                                <div>
+                                    <p class="rv-name">James D.</p>
+                                    <p class="rv-stars">★★★★★</p>
+                                </div>
+                            </div>
+                            <p class="rv-text">"Imran delivered an outstanding website. Fast, clean, and exactly what I
+                                needed.
+                                Communication was smooth and he went beyond expectations."</p>
+                        </div>
+                        <div class="rv-item">
+                            <div class="rv-item-top">
+                                <div class="rv-avatar">AM</div>
+                                <div>
+                                    <p class="rv-name">Amanda M.</p>
+                                    <p class="rv-stars">★★★★★</p>
+                                </div>
+                            </div>
+                            <p class="rv-text">"Professional, reliable and talented. My eCommerce store looks amazing
+                                and loads
+                                super fast. Will definitely hire again!"</p>
+                        </div>
+                        <div class="rv-item">
+                            <div class="rv-item-top">
+                                <div class="rv-avatar">RK</div>
+                                <div>
+                                    <p class="rv-name">Robert K.</p>
+                                    <p class="rv-stars">★★★★★</p>
+                                </div>
+                            </div>
+                            <p class="rv-text">"Best WordPress developer on Fiverr. He understood my requirements
+                                perfectly and
+                                delivered on time with zero revisions needed."</p>
+                        </div>
+                        <div class="rv-item">
+                            <div class="rv-item-top">
+                                <div class="rv-avatar">PL</div>
+                                <div>
+                                    <p class="rv-name">Patricia L.</p>
+                                    <p class="rv-stars">★★★★★</p>
+                                </div>
+                            </div>
+                            <p class="rv-text">"Incredibly fast turnaround. The site is modern, responsive, and our
+                                customers
+                                love it. Highly recommended for any serious business."</p>
+                        </div>
+                        <div class="rv-item">
+                            <div class="rv-item-top">
+                                <div class="rv-avatar">DR</div>
+                                <div>
+                                    <p class="rv-name">David R.</p>
+                                    <p class="rv-stars">★★★★★</p>
+                                </div>
+                            </div>
+                            <p class="rv-text">"Great experience from start to finish. Imran is patient, skilled, and
+                                truly
+                                understands what a good website should do for your brand."</p>
+                        </div>
+                        <div class="rv-item">
+                            <div class="rv-item-top">
+                                <div class="rv-avatar">NT</div>
+                                <div>
+                                    <p class="rv-name">Nina T.</p>
+                                    <p class="rv-stars">★★★★★</p>
+                                </div>
+                            </div>
+                            <p class="rv-text">"The redesign completely transformed our online presence. Visitors now
+                                stay
+                                longer and we've seen a real increase in inquiries. Excellent work."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rv-fiverr-wrap reveal">
+                    <a href="https://www.fiverr.com/imran8858" target="_blank" rel="noopener noreferrer"
+                        class="ts-fiverr-btn">
+                        More Reviews on Fiverr &nbsp;→
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="ts-modal" id="tsModal" role="dialog" aria-modal="true" aria-label="Video testimonial">
+        <div class="ts-modal-bg" id="tsModalBg"></div>
+        <div class="ts-modal-box">
+            <button class="ts-modal-close" id="tsModalClose" aria-label="Close video">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+            <div class="ts-iframe-wrap"><iframe id="tsIframe" src="" allow="autoplay; encrypted-media" allowfullscreen
+                    frameborder="0" title="Testimonial video"></iframe></div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html#home" class="footer-logo">IMRAN</a>
+                    <p class="footer-text">Modern websites built to help brands, businesses and professionals grow
+                        online.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="index.html#portfolio">Portfolio</a>
+                    <a href="testimonials.html">Testimonials</a>
+                </div>
+                <div class="footer-cta"><a href="index.html#contact" class="footer-btn">Free Consultation</a></div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Imran. All rights reserved.</span>
+                <div class="footer-social">
+                    <ul>
+                        <li><a href="https://wa.me/8801885078858" target="_blank">
+                                <span class="cm-icon"><svg role="img" style="height: 19px; width: 19px; fill: #a4a4a4;"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <title>WhatsApp</title>
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z">
+                                        </path>
+                                    </svg></span>
+                            </a></li>
+                        <li><a href="https://www.facebook.com/imrancoder/" target="_blank">
+                                <span class="cm-icon"><svg width="30px" height="30px" viewBox="-5 0 20 20" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Dribbble-Light-Preview"
+                                                transform="translate(-385.000000, -7399.000000)" fill="#139ef8"
+                                                style="fill: #a4a4a4;">
+                                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                    <path
+                                                        d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z"
+                                                        id="facebook-[#176]">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg></span>
+                            </a></li>
+                        <li><a href="https://www.facebook.com/imrancoder/" target="_blank">
+                                <span class="cm-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #a4a4a4;" width="30"
+                                        height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-mail-icon lucide-mail">
+                                        <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                    </svg>
+                                </span>
+                            </a></li>
+                        <li><a href="https://www.linkedin.com/in/imran-coder/" target="_blank">
+                                <span class="cm-icon">
+                                    <svg width="30px" height="30px" viewBox="0 -2 44 44" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Color-" transform="translate(-702.000000, -265.000000)"
+                                                fill="#007EBB" style="fill: #a4a4a4;">
+                                                <path
+                                                    d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z"
+                                                    id="LinkedIn">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Start -->
+    <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg width="20px" height="20px" viewBox="0 0 1024 1024" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M903.232 768l56.768-50.432L512 256l-448 461.568 56.768 50.432L512 364.928z" fill="#fff" /></svg></button>
+    <script src="script.js"></script>
+    <script>
+        function closeMobileNav() {
+            const nav = document.getElementById('mobile-nav');
+            const hamburger = document.getElementById('hamburger');
+            if (nav) nav.classList.remove('active');
+            if (hamburger) hamburger.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
+    </script>
+</body>
+
+</html>

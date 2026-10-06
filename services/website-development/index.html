@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>WordPress Website Development | Custom Business Websites</title>
+
+    <meta name="description"
+        content="Custom WordPress website development for startups, agencies, and growing businesses. Fast, responsive, secure, and SEO-ready websites built around your business needs.">
+
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="IMRAN Website Solutions">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://imranwdev.github.io/website-development.html">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:title"
+        content="WordPress Website Development | Custom Business Websites">
+    <meta property="og:description"
+        content="Custom WordPress websites for startups, agencies, and growing businesses. Fast, responsive, secure, and built around real business needs.">
+    <meta property="og:url"
+        content="https://imranwdev.github.io/website-development.html">
+    <meta property="og:site_name" content="IMRAN Website Solutions">
+    <meta property="og:locale" content="en_US">
+
+    <!-- X / Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title"
+        content="WordPress Website Development | Custom Business Websites">
+    <meta name="twitter:description"
+        content="Custom WordPress websites for startups, agencies, and growing businesses. Fast, responsive, secure, and SEO-ready.">
+
+    <!-- Browser / Device -->
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../service.css">
+</head>
+
+<body>
+    <!-- HEADER (same as home page) -->
+    <header id="main-header">
+        <a href="../../" class="logo"><strong>IMRAN</strong></a>
+        <nav class="desktop-nav">
+            <a href="../../#home">Home</a>
+            <a href="../../#about">About</a>
+            <a href="../../#services">Services</a>
+            <a href="../../#portfolio">Portfolio</a>
+            <a href="../../#testimonials">Testimonials</a>
+        </nav>
+        <div class="header-cta">
+            <a href="../../#contact" class="btn-header">Free Consultation</a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="../../#home" onclick="closeMobileNav()">Home</a>
+        <a href="../../#about" onclick="closeMobileNav()">About</a>
+        <a href="../../#services" onclick="closeMobileNav()">Services</a>
+        <a href="../../#portfolio" onclick="closeMobileNav()">Portfolio</a>
+        <a href="../../#contact" onclick="closeMobileNav()">Contact</a>
+    </nav>
+
+    <!-- ═══════ SERVICE HERO (full height, split layout) ═══════ -->
+    <section class="sv-hero">
+        <div class="sv-hero-glow"></div>
+        <div class="sv-hero-grid"></div>
+        <div class="container sv-hero-grid-layout">
+            <div class="sv-hero-copy">
+                <div class="ssv-crumbs">
+                    <a href="../../#services" class="sv-crumb reveal">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m12 19-7-7 7-7" />
+                            <path d="M19 12H5" />
+                        </svg>
+                        All Services
+                    </a>
+                    <span class="sv-eyebrow reveal reveal-delay-1">
+                        <span class="sv-eyebrow-dot"></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m18 16 4-4-4-4" />
+                            <path d="m6 8-4 4 4 4" />
+                            <path d="m14.5 4-5 16" />
+                        </svg>
+                        WEBSITE DEVELOPMENT
+                    </span>
+                </div>
+                <h1 class="reveal reveal-delay-1">A Website That Works As Hard As You Do</h1>
+                <p class="sv-hero-lead reveal reveal-delay-2">
+                    A custom WordPress website built around your business. Not a recycled template. Clean design, fast
+                    loading, mobile-first, and structured to turn visitors into inquiries and customers.
+                </p>
+
+                <div class="hero-actions reveal reveal-delay-3">
+                    <a href="https://wa.me/8801885078858?text=Hi%2C%20I%27m%20interested%20in%20the%20Website%20Development%20service."
+                        target="_blank" class="btn-primary">Start Your Project</a>
+                    <a href="#talk" class="btn-secondary">Let's Talk First</a>
+                </div>
+                <div class="sv-hero-trust reveal reveal-delay-3">
+                    <span>5.0★ Fiverr Rating</span>
+                    <span class="sep">•</span>
+                    <span>250+ Projects Delivered</span>
+                    <span class="sep">•</span>
+                    <span>Replies within a few hours</span>
+                </div>
+            </div>
+
+            <div class="sv-hero-visual reveal reveal-delay-2 only-desktop">
+                <div class="sv-mock-window">
+                    <div class="sv-mock-bar">
+                        <span></span><span></span><span></span>
+                        <div class="sv-mock-url">yourbusiness.com</div>
+                    </div>
+                    <div class="sv-mock-body">
+                        <div class="sv-mock-hero">
+                            <div class="sv-mock-line w-40 light"></div>
+                            <div class="sv-mock-line w-70"></div>
+                            <div class="sv-mock-btn"></div>
+                        </div>
+                        <div class="sv-mock-row">
+                            <div class="sv-mock-card"></div>
+                            <div class="sv-mock-card"></div>
+                            <div class="sv-mock-card"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sv-mock-badge sv-mock-badge--speed">
+                    <span class="sv-mock-badge-icon">⚡</span>
+                    <div><strong>Loads Under 2s</strong><small>Speed Optimized</small></div>
+                </div>
+                <div class="sv-mock-badge sv-mock-badge--mobile">
+                    <span class="sv-mock-badge-icon">✓</span>
+                    <div><strong>Mobile Ready</strong><small>Fully Responsive</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ WHAT YOU GET (merged: features + included basics) ═══════ -->
+    <section class="sv-section">
+        <div class="container">
+            <div class="section_title center reveal">
+                <h2>Everything You Get</h2>
+                <h3>Included</h3>
+                <p>Every website is built from scratch around your brand and goals. <br>These basics are never an add-on,
+                    they're the standard.</p>
+            </div>
+            <div class="sv-perks-grid">
+                <div class="sv-perk reveal">
+                    <span class="sv-perk-num">01</span>
+                    <span class="sv-perk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m12 3-1.9 4.4L5.5 9l4.6 1.6L12 15l1.9-4.4L18.5 9l-4.6-1.6z" />
+                            <path d="M19 15v4M17 17h4" />
+                        </svg></span>
+                    <h3>Custom Design</h3>
+                    <p>Never a recycled template. Built around your brand, from a blank canvas.</p>
+                </div>
+                <div class="sv-perk reveal reveal-delay-1">
+                    <span class="sv-perk-num">02</span>
+                    <span class="sv-perk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2" />
+                            <path d="M12 18h.01" />
+                        </svg></span>
+                    <h3>Mobile-First & Responsive</h3>
+                    <p>Looks and works flawlessly on mobile, tablet and desktop. Tested on real devices.</p>
+                </div>
+                <div class="sv-perk reveal reveal-delay-2">
+                    <span class="sv-perk-num">03</span>
+                    <span class="sv-perk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20V10M18 20V4M6 20v-4" />
+                        </svg></span>
+                    <h3>Built For Speed</h3>
+                    <p>Optimized images, clean code and caching so pages load in under 2 seconds.</p>
+                </div>
+                <div class="sv-perk reveal">
+                    <span class="sv-perk-num">04</span>
+                    <span class="sv-perk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.3-4.3" />
+                        </svg></span>
+                    <h3>SEO-Ready Foundation</h3>
+                    <p>Proper structure, meta tags and a sitemap set up from day one.</p>
+                </div>
+                <div class="sv-perk reveal reveal-delay-1">
+                    <span class="sv-perk-num">05</span>
+                    <span class="sv-perk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg></span>
+                    <h3>Contact, Maps & Social</h3>
+                    <p>Contact form, Google Maps and social links integrated and connected to you.</p>
+                </div>
+                <div class="sv-perk reveal reveal-delay-2">
+                    <span class="sv-perk-num">06</span>
+                    <span class="sv-perk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
+                        </svg></span>
+                    <h3>Training + 30-Day Support</h3>
+                    <p>A handover walkthrough, plus 30 days of free fixes and guidance after launch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ PROCESS (reuses home page styles) ═══════ -->
+    <section class="vs-process" id="process">
+        <div class="container">
+            <div class="reveal" style="text-align:center;">
+                <div class="section_title center">
+                    <h2>How It Works</h2>
+                    <h3>Process</h3>
+                    <p>A simple, transparent process from first message to launch day.</p>
+                </div>
+            </div>
+            <div class="process-steps">
+                <div class="process-step reveal">
+                    <div class="step-num">01</div>
+                    <h3>Discovery Call</h3>
+                    <p>We talk about your business, your goals, and your customers.</p>
+                </div>
+                <div class="process-step reveal reveal-delay-1">
+                    <div class="step-num">02</div>
+                    <h3>Planning</h3>
+                    <p>Site structure, pages, and content are planned before any design starts.</p>
+                </div>
+                <div class="process-step reveal reveal-delay-2">
+                    <div class="step-num">03</div>
+                    <h3>Design & Build</h3>
+                    <p>We design and develop your website with regular updates throughout the process.</p>
+                </div>
+                <div class="process-step reveal reveal-delay-3">
+                    <div class="step-num">04</div>
+                    <h3>Launch & Support</h3>
+                    <p>Final review, launch, and 30 days of free support are included.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ FAQ (with decorative visual) ═══════ -->
+    <section class="sv-section tight">
+        <div class="container">
+            <div class="section_title reveal">
+                <h2>Common Questions</h2>
+                <h3>FAQ</h3>
+            </div>
+            <div class="sv-faq-wrap">
+                <div class="sv-faq reveal">
+                    <div class="sv-faq-item open">
+                        <button class="sv-faq-q" onclick="svToggleFaq(this)">
+                            How long does a website take to build?
+                            <span class="plus">+</span>
+                        </button>
+                        <div class="sv-faq-a">
+                            <p>Most business websites are completed in 7-10 working days, depending on the number of pages and how quickly content/feedback is provided.</p>
+                        </div>
+                    </div>
+                    <div class="sv-faq-item">
+                        <button class="sv-faq-q" onclick="svToggleFaq(this)">
+                            Do I need to provide the content and images?
+                            <span class="plus">+</span>
+                        </button>
+                        <div class="sv-faq-a">
+                            <p>Not necessarily. If you already have your logo, images, or text content, you can provide them. If not, no problem.</p>
+                            <p>Just share your preferred colors, business goals, target audience, and what you want the website to achieve. I can then help create and structure the content and use suitable AI-generated or free-to-use images where needed.</p>
+                            <p>You can also request changes later if needed.</p>
+                        </div>
+                    </div>
+                    <div class="sv-faq-item">
+                        <button class="sv-faq-q" onclick="svToggleFaq(this)">
+                            Will I be able to update the website myself later?
+                            <span class="plus">+</span>
+                        </button>
+                        <div class="sv-faq-a">
+                            <p>Yes. You’ll have full freedom to update or change the website whenever you need. You can edit things like text, images, and other content yourself.</p>
+                            <p>If you’d like, I can also create a simple tutorial video showing you how to make the updates yourself.</p>
+                        </div>
+                    </div>
+                    <div class="sv-faq-item">
+                        <button class="sv-faq-q" onclick="svToggleFaq(this)">
+                            What if I need help after the website is delivered?
+                            <span class="plus">+</span>
+                        </button>
+                        <div class="sv-faq-a">
+                            <p>Of course. You’ll get 30 days of free support after delivery for small issues and basic guidance. If you need changes or ongoing technical help later, you can also continue with a maintenance plan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sv-faq-visual reveal reveal-delay-2">
+                    <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="160" cy="160" r="128" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"
+                            stroke-dasharray="4 8" fill="none" />
+                        <circle cx="160" cy="160" r="98" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"
+                            fill="none" />
+                        <rect x="94" y="96" width="132" height="98" rx="20" fill="var(--gray-200)"
+                            stroke="var(--gray-300)" stroke-width="1.5" />
+                        <path d="M104 194 L124 214 L124 194 Z" fill="var(--gray-200)" stroke="var(--gray-300)"
+                            stroke-width="1.5" />
+                        <text x="160" y="158" text-anchor="middle" font-family="Poppins, sans-serif" font-size="52"
+                            font-weight="700" fill="#ffffff">?</text>
+                        <circle cx="246" cy="88" r="20" fill="var(--gray-100)" stroke="var(--gray-300)"
+                            stroke-width="1.5" />
+                        <path d="M238 88 l6 6 12 -12" stroke="#4ade80" stroke-width="2.5" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="60" cy="236" r="15" fill="var(--gray-100)" stroke="var(--gray-300)"
+                            stroke-width="1.5" />
+                        <circle cx="60" cy="230" r="2.4" fill="rgba(255,255,255,0.55)" />
+                        <circle cx="60" cy="238" r="2.4" fill="rgba(255,255,255,0.55)" />
+                        <circle cx="60" cy="246" r="2.4" fill="rgba(255,255,255,0.55)" />
+                        <circle cx="54" cy="70" r="4" fill="rgba(255,255,255,0.18)" />
+                        <circle cx="272" cy="212" r="5" fill="rgba(255,255,255,0.14)" />
+                        <circle cx="90" cy="270" r="3" fill="rgba(255,255,255,0.16)" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ LET'S TALK (final CTA — redesigned) ═══════ -->
+    <section class="sv-talk-section" id="talk" style="background:var(--gray-100);">
+        <div class="sv-talk-glow"></div>
+        <div class="container">
+            <div class="sv-talk-card2 reveal">
+
+                <!-- Quote decorations -->
+                <span class="sv-talk2-quote sv-talk2-quote--tl">&#8220;</span>
+                <span class="sv-talk2-quote sv-talk2-quote--br">&#8221;</span>
+
+                <!-- Eyebrow -->
+                <span class="sv-eyebrow sv-eyebrow--center reveal" style="margin-bottom:32px;">
+                    <span class="sv-eyebrow-dot"></span>
+                    LET'S TALK
+                </span>
+
+                <!-- Headline -->
+                <h2 class="sv-talk2-headline reveal reveal-delay-1">
+                    Every Business Is Different,<br>
+                    <span class="sv-talk2-em">So Is Every Website</span>
+                </h2>
+                <p class="sv-talk2-sub reveal reveal-delay-2">I'm not here to sell you a package. I'm here to understand
+                    your business, your goals and your customers<br>Then build a website around that. If you already
+                    have a plan, we'll build it. If you don't, I'll help you figure it out.</p>
+
+                <!-- Two CTA cards -->
+                <div class="sv-talk2-cards">
+                    <a href="https://wa.me/8801885078858?text=Hi%2C%20I%20already%20know%20what%20I%20need%20for%20my%20website%20project."
+                        target="_blank" class="sv-talk2-card reveal reveal-delay-2">
+                        <div class="sv-talk2-card-inner">
+                            <span class="sv-talk2-icon">
+                                <!-- Target / crosshair icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <circle cx="12" cy="12" r="6" />
+                                    <circle cx="12" cy="12" r="2" />
+                                    <path d="M12 2v4M12 18v4M2 12h4M18 12h4" />
+                                </svg>
+                            </span>
+                            <div class="sv-talk2-card-text">
+                                <strong>I Know What I Need</strong>
+                                <span>Tell me what you're looking to build.</span>
+                            </div>
+                        </div>
+                        <span class="sv-talk2-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="https://wa.me/8801885078858?text=Hi%2C%20I%20need%20help%20figuring%20out%20what%20my%20business%20needs."
+                        target="_blank" class="sv-talk2-card reveal reveal-delay-3">
+                        <div class="sv-talk2-card-inner">
+                            <span class="sv-talk2-icon">
+                                <!-- Compass icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+                                </svg>
+                            </span>
+                            <div class="sv-talk2-card-text">
+                                <strong>I Need Guidance First</strong>
+                                <span>Tell me about your business. I'll help you figure out what makes sense.</span>
+                            </div>
+                        </div>
+                        <span class="sv-talk2-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (same as home page) -->
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html#home" class="footer-logo">IMRAN</a>
+                    <p class="footer-text">Modern websites built to help brands, businesses and professionals grow
+                        online.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="index.html#portfolio">Portfolio</a>
+                    <a href="testimonials.html">Testimonials</a>
+                </div>
+                <div class="footer-cta"><a href="index.html#contact" class="footer-btn">Free Consultation</a></div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Imran. All rights reserved.</span>
+                <div class="footer-social">
+                    <ul>
+                        <li><a href="https://wa.me/8801885078858" target="_blank">
+                                <span class="cm-icon"><svg role="img" style="height: 19px; width: 19px; fill: #a4a4a4;"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <title>WhatsApp</title>
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z">
+                                        </path>
+                                    </svg></span>
+                            </a></li>
+                        <li><a href="https://www.facebook.com/imrancoder/" target="_blank">
+                                <span class="cm-icon"><svg width="30px" height="30px" viewBox="-5 0 20 20" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Dribbble-Light-Preview"
+                                                transform="translate(-385.000000, -7399.000000)" fill="#139ef8"
+                                                style="fill: #a4a4a4;">
+                                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                    <path
+                                                        d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z"
+                                                        id="facebook-[#176]">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg></span>
+                            </a></li>
+                        <li><a href="https://www.facebook.com/imrancoder/" target="_blank">
+                                <span class="cm-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #a4a4a4;" width="30"
+                                        height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-mail-icon lucide-mail">
+                                        <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                    </svg>
+                                </span>
+                            </a></li>
+                        <li><a href="https://www.linkedin.com/in/imran-coder/" target="_blank">
+                                <span class="cm-icon">
+                                    <svg width="30px" height="30px" viewBox="0 -2 44 44" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Color-" transform="translate(-702.000000, -265.000000)"
+                                                fill="#007EBB" style="fill: #a4a4a4;">
+                                                <path
+                                                    d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z"
+                                                    id="LinkedIn">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Start -->
+    <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg width="20px" height="20px" viewBox="0 0 1024 1024" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M903.232 768l56.768-50.432L512 256l-448 461.568 56.768 50.432L512 364.928z" fill="#fff" /></svg></button>
+
+    <script src="../../script.js"></script>
+    <script>
+        // FAQ accordion — move this into script.js once, then reuse on every service page
+        function svToggleFaq(btn) {
+            const item = btn.closest('.sv-faq-item');
+            const wasOpen = item.classList.contains('open');
+            document.querySelectorAll('.sv-faq-item').forEach(el => el.classList.remove('open'));
+            if (!wasOpen) item.classList.add('open');
+        }
+    </script>
+</body>
+
+</html>

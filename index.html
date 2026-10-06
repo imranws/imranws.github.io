@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Primary SEO -->
+    <title>IMRAN Website Solutions | WordPress & Business Website Development</title>
+
+    <meta name="description"
+        content="Professional WordPress and business website development for startups, agencies, and growing businesses. Fast, responsive, secure, and conversion-focused websites built by IMRAN Website Solutions.">
+
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="IMRAN Website Solutions">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://imranws.github.io/">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:title"
+        content="IMRAN Website Solutions | WordPress & Business Website Development">
+    <meta property="og:description"
+        content="Professional WordPress and business websites built for startups, agencies, and growing businesses. Fast, responsive, secure, and built around real business needs.">
+    <meta property="og:url" content="https://imranws.github.io/">
+    <meta property="og:site_name" content="IMRAN Website Solutions">
+
+    <!-- X / Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title"
+        content="IMRAN Website Solutions | WordPress & Business Website Development">
+    <meta name="twitter:description"
+        content="Professional WordPress and business website development for startups, agencies, and growing businesses.">
+
+    <!-- Browser / Device -->
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init("oSwx6ddBKLao7qirq");
+    </script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header id="main-header">
+        <a href="#home" class="logo"><strong>IMRAN</strong></a>
+        <nav class="desktop-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#testimonials">Testimonials</a>
+        </nav>
+        <div class="header-cta">
+            <a href="#contact" class="btn-header">Free Consultation</a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+    <!-- MOBILE NAV -->
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="#home" onclick="closeMobileNav()">Home</a>
+        <a href="#about" onclick="closeMobileNav()">About</a>
+        <a href="#services" onclick="closeMobileNav()">Services</a>
+        <a href="#portfolio" onclick="closeMobileNav()">Portfolio</a>
+        <a href="#testimonials" onclick="closeMobileNav()">Testimonials</a>
+        <a href="#contact" onclick="closeMobileNav()">Contact</a>
+    </nav>
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <!--         <div class="hero-mq-wrap">
+            <div class="hero-mq">
+                <span>WORDPRESS</span><span>DEVELOPER</span><span>BANGLADESH</span>
+                <span>WORDPRESS</span><span>DEVELOPER</span><span>BANGLADESH</span>
+            </div>
+        </div> -->
+        <div class="hero-container">
+            <div class="innter_wraper">
+                <div class="hero_left">
+                    <h2 class="hero-badge">PROFESSIONAL WEB SOLUTIONS</h2>
+                    <h1><strong>GROW YOUR</strong>
+                        <strong>BRAND ONLINE</strong>
+                        <!-- <h2>Elevate Your Digital Strategy to the Next Level</h2> -->
+                    </h1>
+                    <p>Modern, fast and responsive websites designed to build trust, improve customer experience and
+                        help your brand grow online.</p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn-primary">Contact Me</a>
+                        <a href="#services" class="btn-secondary">Explore Services</a>
+                    </div>
+                    <!--                     <div class="hero-stats">
+                        <div class="hero-stat reveal">
+                            <h3>250+</h3>
+                            <p>সফল প্রজেক্ট</p>
+                        </div>
+                        <div class="hero-stat reveal reveal-delay-1">
+                            <h3>5★</h3>
+                            <p>Fiverr রেটিং</p>
+                        </div>
+                        <div class="hero-stat reveal reveal-delay-2">
+                            <h3>8+ বছর</h3>
+                            <p>অভিজ্ঞতা</p>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="hero_right">
+                    <img src="imranWebDeveloper.png" alt="Imran Webdev">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+            <div class="about-inner">
+                <div class="about_left">
+                    <div class="hero-phone">
+                        <div class="hero-phone-screen">
+                            <div class="hero-phone-notch"></div>
+                            <div class="hero-phone-content">
+                                <div class="fiverr-card">
+                                    <div class="fiverr-header">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="90" height="28" fill="none"
+                                            viewBox="0 0 120 36" data-track-tag="fiverr_dark_logo">
+                                            <path fill="#fff"
+                                                d="M110.04 17.413h-4.247c-2.735 0-4.198 2.055-4.198 5.478v12.376h-8.056V17.413h-3.417c-2.734 0-4.198 2.055-4.198 5.478v12.376h-8.056V10.81h8.056v3.717c1.319-2.886 3.125-3.717 5.81-3.717h9.862v3.717c1.319-2.886 3.125-3.717 5.81-3.717h2.636v6.603zm-33.93 7.533H59.316c.44 2.74 2.147 4.304 5.028 4.304 2.147 0 3.66-.88 4.15-2.446l7.127 2.006c-1.757 4.255-6.102 6.848-11.277 6.848-8.739 0-12.743-6.8-12.743-12.62 0-5.722 3.515-12.57 12.254-12.57 9.276 0 12.352 6.945 12.352 12.081a25 25 0 0 1-.097 2.397M68.298 20.2c-.195-2.104-1.709-4.06-4.442-4.06-2.54 0-4.052 1.125-4.54 4.06zM37.542 35.267h7.079l8.837-24.456h-8.104l-4.296 14.233-4.395-14.234h-8.056zm-33.001 0h8.006V17.413h7.616v17.854h7.958V10.81H12.547V9.294c0-1.663 1.172-2.69 3.027-2.69h4.59V0h-5.908c-5.81 0-9.715 3.571-9.715 8.804v2.006H0v6.603h4.54z">
+                                            </path>
+                                            <path fill="#1DBF73"
+                                                d="M115.02 36c2.75 0 4.98-2.234 4.98-4.99 0-2.755-2.23-4.99-4.98-4.99a4.984 4.984 0 0 0-4.98 4.99 4.984 4.984 0 0 0 4.98 4.99">
+                                            </path>
+                                        </svg>
+                                        <div class="profile-info">
+                                            <h3>@imran8858 - <span class="seller-badge">
+                                                    Web Developer
+                                                </span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hero-phone-card">
+                                    <div class="hero-phone-card-title">Client satisfaction</div>
+                                    <div class="hero-phone-card-value">5.0 ⭐</div>
+                                    <div class="progress-bar">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="hero-phone-card">
+                                    <div class="hero-phone-card-title">Projects completed</div>
+                                    <div class="hero-phone-card-value">130+</div>
+                                </div>
+                                <div class="hero-phone-card">
+                                    <div class="hero-phone-card-title">Response time</div>
+                                    <div class="hero-phone-card-value">1 Hour</div>
+                                </div>
+                                <div class="hero-phone-card">
+                                    <div class="hero-phone-card-title">Languages</div>
+                                    <div class="hero-phone-card-value">English, বাংলা</div>
+                                </div>
+                            </div>
+                            <a href="https://www.fiverr.com/imran8858/" target="_blank" class="fiverr-link">
+                                Fiverr Porfile →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content reveal reveal-delay-2">
+                    <div class="section_title">
+                        <h2>About Me</h2>
+                        <h3>About Me</h3>
+                    </div>
+                    <p>For over 8 years, I’ve been helping businesses, companies and personal brands build modern
+                        websites that create stronger online presence and support long-term growth.</p>
+                    <p>In addition to Fiverr, I’ve worked for 5+ years as a WordPress Developer at an American web
+                        development company, building secure, fast and user-focused websites for clients across
+                        different industries.</p>
+                    <p>My goal is not just to create a website — I help clients achieve their business goals through
+                        better user experience, performance and long-term support. Even after project delivery, I
+                        provide reliable support whenever needed.</p>
+                    <!-- <div class="skills-grid">
+                        <div class="skill-item"><span class="icon">⚡</span>WordPress Development</div>
+                        <div class="skill-item"><span class="icon">🛒</span>WooCommerce / eCommerce</div>
+                        <div class="skill-item"><span class="icon">🎨</span>Custom Theme Design</div>
+                        <div class="skill-item"><span class="icon">🔍</span>SEO Optimization</div>
+                        <div class="skill-item"><span class="icon">🛡️</span>Malware Removal</div>
+                        <div class="skill-item"><span class="icon">📱</span>Mobile-First Design</div>
+                        <div class="skill-item"><span class="icon">🚀</span>Speed Optimization</div>
+                        <div class="skill-item"><span class="icon">📊</span>Social Media Marketing</div>
+                    </div> -->
+                    <div class="hero-stats">
+                        <div class="hero-stat reveal">
+                            <h3>5★</h3>
+                            <p>Fiverr Review</p>
+                        </div>
+                        <div class="hero-stat reveal reveal-delay-1">
+                            <h3>250+</h3>
+                            <p>Projects Completed</p>
+
+                        </div>
+                        <div class="hero-stat reveal reveal-delay-2">
+                            <h3>8+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="container">
+            <div class="reveal">
+                <div class="section_title center">
+                    <h2>Services</h2>
+                    <h3>Services</h3>
+                    <p>From business websites to eCommerce solutions, choose the service that best fits your goals and
+                        discover how the right website can help your brand grow online.</p>
+                </div>
+            </div>
+            <!--             <div class="services-categories reveal">
+                <button class="cat-btn active" onclick="filterServices('all')">All Services</button>
+                <button class="cat-btn" onclick="filterServices('website')">Build Website</button>
+                <button class="cat-btn" onclick="filterServices('ecommerce')">eCommerce</button>
+                <button class="cat-btn" onclick="filterServices('maintenance')">মেইনটেন্যান্স</button>
+                <button class="cat-btn" onclick="filterServices('marketing')">মার্কেটিং</button>
+            </div> -->
+            <div class="services-grid" id="services-grid">
+                <div class="service-card reveal" data-cat="website">
+                    <span class="s-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-code-xml-icon lucide-code-xml">
+                            <path d="m18 16 4-4-4-4" />
+                            <path d="m6 8-4 4 4 4" />
+                            <path d="m14.5 4-5 16" />
+                        </svg></span>
+                    <h3>Website Development</h3>
+                    <p>New websites for businesses, brands and organizations.</p>
+                    <div class="service-footer">
+                        <a href="services/website-development/">Explore Service <span>→</span></a>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-1" data-cat="ecommerce">
+                    <span class="s-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-shopping-cart-icon lucide-shopping-cart">
+                            <circle cx="8" cy="21" r="1" />
+                            <circle cx="19" cy="21" r="1" />
+                            <path
+                                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                        </svg></span>
+                    <h3>eCommerce Solutions</h3>
+                    <p>Modern online stores designed for better sales and customer experience.</p>
+                    <div class="service-footer">
+                        <a href="ecommerce-solutions.html">Explore Service <span>→</span></a>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-2" data-cat="ecommerce">
+                    <span class="s-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-wand-sparkles-icon lucide-wand-sparkles">
+                            <path
+                                d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72" />
+                            <path d="m14 7 3 3" />
+                            <path d="M5 6v4" />
+                            <path d="M19 14v4" />
+                            <path d="M10 2v2" />
+                            <path d="M7 8H3" />
+                            <path d="M21 16h-4" />
+                            <path d="M11 3H9" />
+                        </svg></span>
+                    <h3>Website Redesign</h3>
+                    <p>Upgrade outdated websites with a modern and professional look.</p>
+                    <div class="service-footer">
+                        <a href="website-redesign.html">Explore Service <span>→</span></a>
+                    </div>
+                </div>
+                <div class="service-card reveal" data-cat="website">
+                    <span class="s-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-rocket-icon lucide-rocket">
+                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+                            <path
+                                d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" />
+                            <path
+                                d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" />
+                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" />
+                        </svg></span>
+                    <h3>Speed & Security Optimization</h3>
+                    <p>Improve loading speed, security and overall website performance.</p>
+                    <div class="service-footer">
+                        <a href="speed-security-optimization.html">Explore Service <span>→</span></a>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-1" data-cat="maintenance">
+                    <span class="s-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-wrench-icon lucide-wrench">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+                        </svg></span>
+                    <h3>Website Maintenance and Support</h3>
+                    <p>Regular updates, monitoring and long-term technical support.</p>
+                    <div class="service-footer">
+                        <a href="website-maintenance.html">Explore Service <span>→</span></a>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-2" data-cat="maintenance">
+                    <span class="s-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-layers-icon lucide-layers">
+                            <path
+                                d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+                            <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+                            <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+                        </svg></span>
+                    <h3>Website Fixes & Features</h3>
+                    <p>Custom sections, functionality improvements and bug fixing support.</p>
+                    <div class="service-footer">
+                        <a href="website-fixes-features.html">Explore Service <span>→</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PROCESS -->
+    <section id="process">
+        <div class="container">
+            <div class="reveal" style="text-align:center;">
+                <div class="section_title center">
+                    <h2>Working Process</h2>
+                    <h3>Process</h3>
+                    <p>From Vision to Success</p>
+                </div>
+            </div>
+            <div class="process-steps">
+                <div class="process-step reveal">
+                    <div class="step-num">01</div>
+                    <h3>Discussion</h3>
+                    <p>Share your goals, ideas and website requirements to get started smoothly.</p>
+                </div>
+                <div class="process-step reveal reveal-delay-1">
+                    <div class="step-num">02</div>
+                    <h3>Planning & Development</h3>
+                    <p>Your website is planned and built with a modern, responsive approach.</p>
+                </div>
+                <div class="process-step reveal reveal-delay-2">
+                    <div class="step-num">03</div>
+                    <h3>Review & Revisions</h3>
+                    <p>Review the website and request final improvements before launch.</p>
+                </div>
+                <div class="process-step reveal reveal-delay-3">
+                    <div class="step-num">04</div>
+                    <h3>Launch & Support</h3>
+                    <p>Your website goes live, I monitor everything and provide ongoing support.</p>
+                </div>
+                <!--                 <div class="process-step reveal reveal-delay-4">
+                    <div class="step-num">05</div>
+                    <h3>Launch & Support</h3>
+                    <p>The website goes live with ongoing support and guidance.</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <section class="pf-section" id="portfolio">
+        <div class="container">
+            <div class="reveal pf-top visible">
+                <div class="section_title">
+                    <h2>PORTFOLIO</h2>
+                    <h3>PROJECTS</h3>
+                </div>
+                <div class="pf-cta">
+                    <a href="portfolio/" class="pf-view-btn">
+                        View Full Portfolio &nbsp;→
+                    </a>
+                </div>
+            </div>
+            <div class="pf-grid">
+                <!-- ITEM -->
+                <!-- <a href="https://holyestates.com/" class="pf-card" target="_blank">
+                    <div class="pf-image-wrap">
+                        <img src="img/th1.png" alt="Project Preview">
+                        <div class="pf-overlay"></div>
+                    </div>
+                    <span class="pf_arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-arrow-down-right-icon lucide-arrow-down-right">
+                            <path d="m7 7 10 10"></path>
+                            <path d="M17 7v10H7"></path>
+                        </svg>
+                    </span>
+                </a> -->
+                <!-- ITEM -->
+                <a href="https://qbpn.com/" class="pf-card" target="_blank">
+                    <div class="pf-image-wrap">
+                        <img src="img/qbpn.webp" alt="qbpn">
+                        <div class="pf-overlay"></div>
+                    </div>
+                    <span class="pf_arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-arrow-down-right-icon lucide-arrow-down-right">
+                            <path d="m7 7 10 10"></path>
+                            <path d="M17 7v10H7"></path>
+                        </svg>
+                    </span>
+                    <!--                     <div class="pf-content">
+                        <span class="pf-category">
+                            eCommerce
+                        </span>
+                        <h4>
+                            Fashion Store Design
+                        </h4>
+                    </div> -->
+                </a>
+                <!-- ITEM -->
+                <a href="portfolio/fashion/" class="pf-card">
+                    <div class="pf-image-wrap">
+                        <img src="img/fashion.webp" alt="Fashion">
+                        <div class="pf-overlay"></div>
+                    </div>
+                    <span class="pf_arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-arrow-down-right-icon lucide-arrow-down-right">
+                            <path d="m7 7 10 10"></path>
+                            <path d="M17 7v10H7"></path>
+                        </svg>
+                    </span>
+                    <!--                     <div class="pf-content">
+                        <span class="pf-category">
+                            Personal Brand
+                        </span>
+                        <h4>
+                            Creator Portfolio Website
+                        </h4>
+                    </div> -->
+                </a>
+                <!-- ITEM -->
+                <a href="/portfolio/griho-olindo/" class="pf-card" target="_blank">
+                    <div class="pf-image-wrap">
+                        <img src="img/grihoolindo.webp" alt="Project Preview">
+                        <div class="pf-overlay"></div>
+                    </div>
+                    <span class="pf_arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-arrow-down-right-icon lucide-arrow-down-right">
+                            <path d="m7 7 10 10"></path>
+                            <path d="M17 7v10H7"></path>
+                        </svg>
+                    </span>
+                </a>
+                <!-- <a href="https://jamesstanleyny.com/" class="pf-card" target="_blank">
+                    <div class="pf-image-wrap">
+                        <img src="img/th3.png" alt="Project Preview">
+                        <div class="pf-overlay"></div>
+                    </div>
+                    <span class="pf_arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-arrow-down-right-icon lucide-arrow-down-right">
+                            <path d="m7 7 10 10"></path>
+                            <path d="M17 7v10H7"></path>
+                        </svg>
+                    </span>
+                </a> -->
+                <a href="portfolio/image-appeal/" class="pf-card" target="_blank">
+                    <div class="pf-image-wrap">
+                        <img src="img/image-appeal.webp" alt="Image Appeal">
+                        <div class="pf-overlay"></div>
+                    </div>
+                    <span class="pf_arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-arrow-down-right-icon lucide-arrow-down-right">
+                            <path d="m7 7 10 10"></path>
+                            <path d="M17 7v10H7"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <div class="full_width_img"><img src="imran-black-desk.jpg" alt="Imran Webdev"></div>
+    <section class="ts-section" id="testimonials">
+        <div class="container">
+            <div class="reveal testi_top">
+                <div class="section_title ">
+                    <h2>TESTIMONIALS</h2>
+                    <h3>REVIEWS</h3>
+                </div>
+                <div class="ts-cta show-pc">
+                    <a href="https://www.fiverr.com/imran8858" target="_blank" rel="noopener noreferrer"
+                        class="ts-fiverr-btn">
+                        Text Reviews &nbsp;→
+                    </a>
+                </div>
+            </div>
+            <!-- VIDEO TESTIMONIALS — staggered cinematic layout -->
+            <div class="ts-video-row">
+                <div class="ts-vcard ts-vcard--up" data-video-id="STKqXZsF4sI">
+                    <div class="ts-thumb-wrap">
+                        <img class="ts-thumb" src="https://img.youtube.com/vi/STKqXZsF4sI/maxresdefault.jpg"
+                            alt="Testimonial video - Mohan" loading="lazy" />
+                        <div class="ts-overlay"></div>
+                        <button class="ts-play" aria-label="Play video">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                                <path d="M8 5.14v14l11-7-11-7z" />
+                            </svg>
+                        </button>
+                        <!-- <div class="ts-vcard-label">
+                            <p class="ts-vname">Mohan</p>
+                            <p class="ts-vrole">Consultancy Business Owner</p>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="ts-vcard ts-vcard--up" data-video-id="QBNyW4rfUPY">
+                    <div class="ts-thumb-wrap">
+                        <img class="ts-thumb" src="https://img.youtube.com/vi/QBNyW4rfUPY/mqdefault.jpg"
+                            alt="Testimonial video - Chase Francis" loading="lazy" />
+                        <!-- <div class="ts-overlay"></div> -->
+                        <button class="ts-play" aria-label="Play video">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                                <path d="M8 5.14v14l11-7-11-7z" />
+                            </svg>
+                        </button>
+                        <!-- <div class="ts-vcard-label">
+                            <p class="ts-vname">Chase Francis</p>
+                            <p class="ts-vrole">CFGroove Digital Agency</p>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="ts-vcard ts-vcard--mid" data-video-id="U9197Rx8Uc8">
+                    <div class="ts-thumb-wrap">
+                        <img class="ts-thumb" src="https://img.youtube.com/vi/U9197Rx8Uc8/mqdefault.jpg"
+                            alt="Testimonial video - Maus" loading="lazy" />
+                        <!-- <div class="ts-overlay"></div> -->
+                        <button class="ts-play" aria-label="Play video">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                                <path d="M8 5.14v14l11-7-11-7z" />
+                            </svg>
+                        </button>
+                        <!-- <div class="ts-vcard-label">
+                            <p class="ts-vname">Maus</p>
+                            <p class="ts-vrole">Beat Valhalla</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="ts-cta show-phone">
+                <a href="https://www.fiverr.com/imran8858" target="_blank" rel="noopener noreferrer"
+                    class="ts-fiverr-btn">
+                    Text Reviews &nbsp;→
+                </a>
+            </div>
+            <!--             <div class="ts-marquee-section">
+                <p class="ts-marquee-label">★★★★★ &nbsp; Fiverr Reviews</p>
+                <div class="ts-marquee-outer" id="marqueeOuter">
+                    <div class="ts-marquee-track" id="marqueeTrack">
+                        <div class="ts-review-item">
+                            <p class="ts-review-text">"Imran delivered an outstanding website. Fast, clean, and exactly what I needed. Communication was smooth and he went beyond expectations."</p>
+                            <p class="ts-review-author">— James D.</p>
+                        </div>
+                        <div class="ts-review-item">
+                            <p class="ts-review-text">"Professional, reliable and talented. My eCommerce store looks amazing and loads super fast. Will definitely hire again!"</p>
+                            <p class="ts-review-author">— Amanda M.</p>
+                        </div>
+                        <div class="ts-review-item">
+                            <p class="ts-review-text">"Best WordPress developer on Fiverr. He understood my requirements perfectly and delivered on time with zero revisions needed."</p>
+                            <p class="ts-review-author">— Robert K.</p>
+                        </div>
+                        <div class="ts-review-item">
+                            <p class="ts-review-text">"Incredibly fast turnaround. The site is modern, responsive, and our customers love it. Highly recommended for any serious business."</p>
+                            <p class="ts-review-author">— Patricia L.</p>
+                        </div>
+                        <div class="ts-review-item">
+                            <p class="ts-review-text">"Great experience from start to finish. Imran is patient, skilled, and truly understands what a good website should do for your brand."</p>
+                            <p class="ts-review-author">— David R.</p>
+                        </div>
+                        <div class="ts-review-item">
+                            <p class="ts-review-text">"The redesign completely transformed our online presence. Visitors now stay longer and we've seen a real increase in inquiries. Excellent work."</p>
+                            <p class="ts-review-author">— Nina T.</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- CTA -->
+        </div>
+        <!-- TEXT REVIEWS — infinite marquee ticker -->
+    </section>
+    <!-- MODAL -->
+    <div class="ts-modal" id="tsModal" role="dialog" aria-modal="true" aria-label="Video testimonial">
+        <div class="ts-modal-bg" id="tsModalBg"></div>
+        <div class="ts-modal-box">
+            <button class="ts-modal-close" id="tsModalClose" aria-label="Close video">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+            <div class="ts-iframe-wrap">
+                <iframe id="tsIframe" src="" allow="autoplay; encrypted-media" allowfullscreen frameborder="0"
+                    title="Testimonial video"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- FIverr text model -->
+
+    <!-- Video modal already exists, this is the REVIEWS modal -->
+    <div class="rv-modal" id="rvModal" role="dialog" aria-modal="true" aria-label="Fiverr Reviews">
+        <div class="rv-modal-bg" id="rvModalBg"></div>
+        <div class="rv-modal-box">
+            <div class="rv-modal-head">
+                <div>
+                    <p class="rv-modal-label">★★★★★ &nbsp; Fiverr Reviews</p>
+                    <h3 class="rv-modal-title">What clients say</h3>
+                </div>
+                <button class="rv-modal-close" id="rvModalClose" aria-label="Close reviews">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18"
+                        height="18">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <div class="rv-list">
+                <div class="rv-item">
+                    <div class="rv-item-top">
+                        <div class="rv-avatar">JD</div>
+                        <div>
+                            <p class="rv-name">James D.</p>
+                            <p class="rv-stars">★★★★★</p>
+                        </div>
+                    </div>
+                    <p class="rv-text">"Imran delivered an outstanding website. Fast, clean, and exactly what I needed.
+                        Communication was smooth and he went beyond expectations."</p>
+                </div>
+                <div class="rv-item">
+                    <div class="rv-item-top">
+                        <div class="rv-avatar">AM</div>
+                        <div>
+                            <p class="rv-name">Amanda M.</p>
+                            <p class="rv-stars">★★★★★</p>
+                        </div>
+                    </div>
+                    <p class="rv-text">"Professional, reliable and talented. My eCommerce store looks amazing and loads
+                        super fast. Will definitely hire again!"</p>
+                </div>
+                <div class="rv-item">
+                    <div class="rv-item-top">
+                        <div class="rv-avatar">RK</div>
+                        <div>
+                            <p class="rv-name">Robert K.</p>
+                            <p class="rv-stars">★★★★★</p>
+                        </div>
+                    </div>
+                    <p class="rv-text">"Best WordPress developer on Fiverr. He understood my requirements perfectly and
+                        delivered on time with zero revisions needed."</p>
+                </div>
+                <div class="rv-item">
+                    <div class="rv-item-top">
+                        <div class="rv-avatar">PL</div>
+                        <div>
+                            <p class="rv-name">Patricia L.</p>
+                            <p class="rv-stars">★★★★★</p>
+                        </div>
+                    </div>
+                    <p class="rv-text">"Incredibly fast turnaround. The site is modern, responsive, and our customers
+                        love it. Highly recommended for any serious business."</p>
+                </div>
+                <div class="rv-item">
+                    <div class="rv-item-top">
+                        <div class="rv-avatar">DR</div>
+                        <div>
+                            <p class="rv-name">David R.</p>
+                            <p class="rv-stars">★★★★★</p>
+                        </div>
+                    </div>
+                    <p class="rv-text">"Great experience from start to finish. Imran is patient, skilled, and truly
+                        understands what a good website should do for your brand."</p>
+                </div>
+                <div class="rv-item">
+                    <div class="rv-item-top">
+                        <div class="rv-avatar">NT</div>
+                        <div>
+                            <p class="rv-name">Nina T.</p>
+                            <p class="rv-stars">★★★★★</p>
+                        </div>
+                    </div>
+                    <p class="rv-text">"The redesign completely transformed our online presence. Visitors now stay
+                        longer and we've seen a real increase in inquiries. Excellent work."</p>
+                </div>
+            </div>
+            <div class="rv-modal-footer">
+                <a href="https://www.fiverr.com/imran8858" target="_blank" rel="noopener noreferrer"
+                    class="rv-fiverr-btn">
+                    More Reviews on Fiverr &nbsp;→
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+            <div class="section_title center reveal">
+                <h2>Contact</h2>
+                <h3>Contact</h3>
+                <p>Tell me about your project and I will help you fiend the right solution.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="reveal">
+                    <div class="contact-methods">
+                        <a href="https://wa.me/8801885078858" target="_blank" class="contact-method">
+                            <span class="cm-icon"><svg role="img" style="height: 30px; width: 30px; fill: #2eb240;"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <title>WhatsApp</title>
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                                </svg></span>
+                            <div>
+                                <div class="cm-label">WhatsApp</div>
+                                <div class="cm-value">01885-078858</div>
+                            </div>
+                            <span class="link_arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-arrow-down-right-icon lucide-arrow-down-right">
+                                    <path d="m7 7 10 10" />
+                                    <path d="M17 7v10H7" />
+                                </svg></span>
+                        </a>
+                        <a href="https://www.facebook.com/imrancoder/" target="_blank" class="contact-method">
+                            <span class="cm-icon"><svg width="30px" height="30px" viewBox="-5 0 20 20" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Dribbble-Light-Preview" transform="translate(-385.000000, -7399.000000)"
+                                            fill="#139ef8">
+                                            <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                <path
+                                                    d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z"
+                                                    id="facebook-[#176]">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg></span>
+                            <div>
+                                <div class="cm-label">Facebook</div>
+                                <div class="cm-value">@imrancoder</div>
+                            </div>
+                            <span class="link_arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-arrow-down-right-icon lucide-arrow-down-right">
+                                    <path d="m7 7 10 10" />
+                                    <path d="M17 7v10H7" />
+                                </svg></span>
+                        </a>
+                        <a href="https://www.facebook.com/imrancoder/" target="_blank" class="contact-method">
+                            <span class="cm-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #e34133;" width="30" height="30"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-mail-icon lucide-mail">
+                                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                                </svg>
+                            </span>
+                            <div>
+                                <div class="cm-label">Email</div>
+                                <div class="cm-value">imranwdev@gmail.com</div>
+                            </div>
+                            <span class="link_arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-arrow-down-right-icon lucide-arrow-down-right">
+                                    <path d="m7 7 10 10" />
+                                    <path d="M17 7v10H7" />
+                                </svg></span>
+                        </a>
+                        <a href="https://www.fiverr.com/imran8858/" target="_blank" class="contact-method">
+                            <span class="cm-icon">
+                                <svg fill="#1cb96f" width="30px" height="30px" viewBox="-2.5 -2 24 24"
+                                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin"
+                                    class="jam jam-fiverr">
+                                    <path
+                                        d='M16.25 16.25v-10h-10v-.625c0-1.034.841-1.875 1.875-1.875H10V0H8.125A5.632 5.632 0 0 0 2.5 5.625v.625H0V10h2.5v6.25H0V20h8.75v-3.75h-2.5V10h6.285v6.25H10V20h8.75v-3.75h-2.5z' />
+                                    <circle cx='14.375' cy='1.875' r='1.875' />
+                                </svg>
+                            </span>
+                            <div>
+                                <div class="cm-label">Fiverr</div>
+                                <div class="cm-value">View Fiverr Profile</div>
+                            </div>
+                            <span class="link_arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-arrow-down-right-icon lucide-arrow-down-right">
+                                    <path d="m7 7 10 10" />
+                                    <path d="M17 7v10H7" />
+                                </svg></span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/imran-coder/" target="_blank" class="contact-method">
+                            <span class="cm-icon">
+                                <svg width="30px" height="30px" viewBox="0 -2 44 44" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Color-" transform="translate(-702.000000, -265.000000)" fill="#007EBB">
+                                            <path
+                                                d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z"
+                                                id="LinkedIn">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </span>
+                            <div>
+                                <div class="cm-label">Linkedin</div>
+                                <div class="cm-value">@imran-coder</div>
+                            </div>
+                            <span class="link_arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-arrow-down-right-icon lucide-arrow-down-right">
+                                    <path d="m7 7 10 10" />
+                                    <path d="M17 7v10H7" />
+                                </svg></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form reveal reveal-delay-2">
+                    <div class="form-group">
+                        <label>Your Name *</label>
+                        <input type="text" id="name" placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" id="email" placeholder="Enter your email address">
+                    </div>
+                    <div class="form-group">
+                        <label>Project Details</label>
+                        <textarea id="message" rows="5"
+                            placeholder="Tell me a little about your project or business..."></textarea>
+                    </div>
+                    <button class="form-submit" onclick="handleFormSubmit(event)">
+                        Get In Touch
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html#home" class="footer-logo">IMRAN</a>
+                    <p class="footer-text">Modern websites built to help brands, businesses and professionals grow
+                        online.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="testimonials.html">Testimonials</a>
+                </div>
+                <div class="footer-cta"><a href="index.html#contact" class="footer-btn">Free Consultation</a></div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Imran. All rights reserved.</span>
+                <div class="footer-social">
+                    <ul>
+                        <li><a href="https://wa.me/8801885078858" target="_blank">
+                                <span class="cm-icon"><svg role="img" style="height: 19px; width: 19px; fill: #a4a4a4;"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <title>WhatsApp</title>
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z">
+                                        </path>
+                                    </svg></span>
+                            </a></li>
+                        <li><a href="https://www.facebook.com/imrancoder/" target="_blank">
+                                <span class="cm-icon"><svg width="30px" height="30px" viewBox="-5 0 20 20" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Dribbble-Light-Preview"
+                                                transform="translate(-385.000000, -7399.000000)" fill="#139ef8"
+                                                style="fill: #a4a4a4;">
+                                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                    <path
+                                                        d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z"
+                                                        id="facebook-[#176]">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg></span>
+                            </a></li>
+                        <li><a href="https://www.facebook.com/imrancoder/" target="_blank">
+                                <span class="cm-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #a4a4a4;" width="30"
+                                        height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-mail-icon lucide-mail">
+                                        <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                    </svg>
+                                </span>
+                            </a></li>
+                        <li><a href="https://www.linkedin.com/in/imran-coder/" target="_blank">
+                                <span class="cm-icon">
+                                    <svg width="30px" height="30px" viewBox="0 -2 44 44" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Color-" transform="translate(-702.000000, -265.000000)"
+                                                fill="#007EBB" style="fill: #a4a4a4;">
+                                                <path
+                                                    d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z"
+                                                    id="LinkedIn">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Start -->
+    <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg width="20px" height="20px" viewBox="0 0 1024 1024" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M903.232 768l56.768-50.432L512 256l-448 461.568 56.768 50.432L512 364.928z" fill="#fff" /></svg></button>
+    <!-- BOTTOM NAV (Mobile) -->
+    <!--     <nav class="bottom-nav">
+        <div class="bottom-nav-inner">
+            <a href="#home" class="bnav-item active">
+                <span class="bnav-icon">🏠</span>হোম
+            </a>
+            <a href="#services" class="bnav-item">
+                <span class="bnav-icon">⚡</span>সেবা
+            </a>
+            <a href="#pricing" class="bnav-item">
+                <span class="bnav-icon">💰</span>মূল্য
+            </a>
+            <a href="#testimonials" class="bnav-item">
+                <span class="bnav-icon">★</span>রিভিউ
+            </a>
+            <a href="#contact" class="bnav-item">
+                <span class="bnav-icon">📞</span>যোগাযোগ
+            </a>
+        </div>
+    </nav> -->
+    <!-- LIVE CHAT WIDGET -->
+    <!--     <div class="chat-widget">
+        <div class="chat-options" id="chat-options">
+            <a href="https://wa.me/8801885078858?text=আমি আপনার সেবা সম্পর্কে জানতে চাই।" target="_blank" class="chat-option whatsapp">
+                💬 WhatsApp করুন
+            </a>
+            <a href="https://m.me/imrancoder" target="_blank" class="chat-option messenger">
+                💙 Messenger
+            </a>
+        </div>
+        <button class="chat-toggle" id="chat-toggle" onclick="toggleChat()" aria-label="Chat">
+            <span class="icon-open">💬</span>
+            <span class="icon-close">✕</span>
+        </button>
+    </div> -->
+    <script src="script.js"></script>
+</body>
+
+</html>

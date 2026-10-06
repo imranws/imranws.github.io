@@ -1,0 +1,917 @@
+/* =========================================================
+   SERVICE.CSS — Shared styles for all single-service pages
+   Load AFTER style.css. Reuses variables from style.css root.
+   Prefix used for all new classes: .sv-
+   ========================================================= */
+
+/* ── BREADCRUMB ── */
+.ssv-crumbs {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 45px;
+}
+
+
+.sv-crumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    text-decoration: none;
+    margin-bottom: 0;
+    transition: var(--transition);
+}
+
+.sv-crumb:hover {
+    color: var(--white);
+}
+
+/* ── SHARED: pulsing eyebrow badge (hero + talk card) ── */
+.sv-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 20px;
+    border: 1px solid var(--gray-300);
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gray-500);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.sv-eyebrow--center {
+    margin: 0 auto 24px;
+}
+
+.sv-eyebrow-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4ade80;
+    animation: svPulse 2s infinite;
+    flex-shrink: 0;
+}
+
+@keyframes svPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.55);
+    }
+
+    70% {
+        box-shadow: 0 0 0 7px rgba(74, 222, 128, 0);
+    }
+}
+
+/* Reusable dot-separated trust line */
+.sv-hero-trust,
+.sv-talk-trust {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.82rem;
+    color: var(--gray-500);
+}
+
+.sv-hero-trust .sep,
+.sv-talk-trust .sep {
+    color: var(--gray-400);
+}
+
+/* ── SERVICE HERO (full height, split layout) ── */
+.sv-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 60px;
+    background: #0a0a0a;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.sv-hero-glow {
+    position: absolute;
+    top: -180px;
+    right: -160px;
+    width: 680px;
+    height: 560px;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.sv-hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 46px 46px;
+    -webkit-mask-image: radial-gradient(ellipse 70% 65% at 25% 40%, black 0%, transparent 75%);
+    mask-image: radial-gradient(ellipse 70% 65% at 25% 40%, black 0%, transparent 75%);
+    pointer-events: none;
+}
+
+.sv-hero-grid-layout {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.sv-hero h1 {
+    font-size: clamp(2.2rem, 3.9vw, 3.3rem);
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: -1.5px;
+    margin: 18px 0 20px;
+}
+
+.sv-hero-lead {
+    font-size: 1.02rem;
+    color: var(--gray-500);
+    line-height: 1.85;
+    max-width: 540px;
+    margin-bottom: 34px;
+}
+
+.sv-hero .hero-actions {
+    margin-bottom: 26px;
+}
+
+/* ── Hero decorative "website mockup" visual ── */
+.sv-hero-visual {
+    position: relative;
+}
+
+.sv-mock-window {
+    background: var(--gray-100);
+    border: 1px solid var(--gray-300);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.55);
+    animation: svFloat 6s ease-in-out infinite;
+}
+
+@keyframes svFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
+.sv-mock-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 18px;
+    background: var(--gray-200);
+    border-bottom: 1px solid var(--gray-300);
+}
+
+.sv-mock-bar span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--gray-400);
+    display: inline-block;
+}
+
+.sv-mock-url {
+    margin-left: 14px;
+    font-size: 0.7rem;
+    color: var(--gray-500);
+    background: var(--gray-100);
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    padding: 4px 12px;
+    flex: 1;
+}
+
+.sv-mock-body {
+    padding: 26px 22px 30px;
+}
+
+.sv-mock-hero {
+    padding: 22px 20px;
+    background: var(--gray-200);
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.sv-mock-line {
+    height: 9px;
+    border-radius: 5px;
+    background: var(--gray-300);
+    margin-bottom: 10px;
+}
+
+.sv-mock-line.light {
+    background: rgba(255, 255, 255, 0.14);
+    height: 7px;
+}
+
+.sv-mock-line.w-40 {
+    width: 40%;
+}
+
+.sv-mock-line.w-70 {
+    width: 70%;
+}
+
+.sv-mock-btn {
+    width: 84px;
+    height: 22px;
+    border-radius: 30px;
+    background: var(--white);
+    margin-top: 12px;
+}
+
+.sv-mock-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.sv-mock-card {
+    aspect-ratio: 1;
+    background: var(--gray-200);
+    border: 1px solid var(--gray-300);
+    border-radius: 10px;
+}
+
+.sv-mock-badge {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--gray-100);
+    border: 1px solid var(--gray-300);
+    border-radius: 14px;
+    padding: 12px 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.sv-mock-badge-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.sv-mock-badge strong {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.sv-mock-badge small {
+    font-size: 0.68rem;
+    color: var(--gray-500);
+}
+
+.sv-mock-badge--speed {
+    bottom: -18px;
+    left: -24px;
+    animation: svFloat 5s ease-in-out infinite;
+    animation-delay: 0.4s;
+}
+
+.sv-mock-badge--mobile {
+    top: 30px;
+    right: -20px;
+    animation: svFloat 5.5s ease-in-out infinite;
+    animation-delay: 0.9s;
+}
+
+/* ── SECTION SPACING (compact variant) ── */
+
+
+.sv-section {
+    background: #121212;
+}
+
+
+/* ── PERKS GRID (bento icon cards) ── */
+.sv-perks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.sv-perk {
+    position: relative;
+    padding: 30px 26px;
+    background: #0a0a0a;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.sv-perk::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.sv-perk:hover::before {
+    opacity: 1;
+}
+
+.sv-perk:hover {
+    border-color: rgba(255, 255, 255, 0.22);
+    transform: translateY(-6px);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45);
+}
+
+.sv-perk-num {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    font-family: var(--font-en);
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    line-height: 1;
+    user-select: none;
+}
+
+.sv-perk-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--gray-200);
+    border: 1px solid var(--gray-300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+}
+
+.sv-perk:hover .sv-perk-icon {
+    background: var(--white);
+    color: var(--black);
+    transform: scale(1.08) rotate(-4deg);
+}
+
+.sv-perk h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.sv-perk p {
+    font-size: 0.83rem;
+    color: var(--gray-500);
+    line-height: 1.65;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* vs-process */
+
+.vs-process {
+    background: #0a0a0a !important;
+}
+
+/* ── FAQ (split with decorative visual) ── */
+.sv-faq-wrap {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 44px;
+}
+
+.sv-faq {
+    max-width: 100%;
+}
+
+.sv-faq-item {
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.sv-faq-item:first-child {
+    border-top: 1px solid var(--gray-200);
+}
+
+.sv-faq-q {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 22px 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-en);
+    font-size: 0.98rem;
+    font-weight: 400;
+    color: var(--white);
+}
+
+.sv-faq-q .plus {
+    font-size: 1.2rem;
+    color: var(--gray-500);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.sv-faq-item.open .sv-faq-q .plus {
+    transform: rotate(45deg);
+    color: var(--white);
+}
+
+.sv-faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+.sv-faq-item.open .sv-faq-a {
+    max-height: 240px;
+}
+
+.sv-faq-a p {
+    padding: 0 4px 24px;
+    color: var(--gray-500);
+    font-size: 0.88rem;
+    line-height: 1.8;
+    max-width: 620px;
+}
+
+.sv-faq-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sv-faq-visual svg {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    animation: svFloat 7s ease-in-out infinite;
+}
+
+/* ── LET'S TALK — original card (kept for reference) ── */
+.sv-talk-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.sv-talk-glow {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 460px;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.sv-talk-card {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    text-align: center;
+    padding: 68px 56px;
+    border-radius: 32px;
+    border: 1px solid var(--gray-200);
+    background: #0b0b0b;
+    overflow: hidden;
+    box-shadow: 0 40px 90px rgba(0, 0, 0, 0.5);
+}
+
+.sv-talk-quote {
+    position: absolute;
+    top: 20px;
+    left: 26px;
+    font-family: Georgia, serif;
+    font-size: 140px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.045);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+}
+
+.sv-talk-card h2 {
+    position: relative;
+    z-index: 1;
+    font-size: clamp(1.8rem, 3.6vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.25;
+    max-width: 540px;
+    margin: 0 auto 20px;
+}
+
+.sv-talk-card h2 .dim-em {
+    color: var(--gray-500);
+}
+
+.sv-talk-card>p {
+    position: relative;
+    z-index: 1;
+    color: var(--gray-500);
+    line-height: 1.85;
+    font-size: 0.98rem;
+    max-width: 860px;
+    margin: 0 auto 40px;
+}
+
+.sv-talk-actions {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto 34px;
+}
+
+.sv-talk-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 28px 20px;
+    border-radius: 18px;
+    border: 1px solid var(--gray-300);
+    background: rgba(255, 255, 255, 0.02);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.sv-talk-btn:hover {
+    border-color: var(--white);
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.sv-talk-btn-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    transition: var(--transition);
+}
+
+.sv-talk-btn:hover .sv-talk-btn-icon {
+    background: var(--white);
+    transform: scale(1.08);
+}
+
+.sv-talk-btn strong {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.sv-talk-btn small {
+    font-size: 0.74rem;
+    color: var(--gray-500);
+    font-weight: 400;
+}
+
+.sv-talk-trust {
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+}
+
+
+
+
+/* ==========================================================
+   CTA REDESIGN — sv-talk2 (used in website-development.html)
+   ========================================================== */
+
+.sv-talk-card2 {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    text-align: center;
+    padding: 64px 52px 52px;
+    border-radius: 28px;
+    border: 1px solid var(--gray-200);
+    background: #0b0b0b;
+    box-shadow: 0 40px 90px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* Quote corner decorations */
+.sv-talk2-quote {
+    position: absolute;
+    font-family: Georgia, serif;
+    font-size: 120px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.06);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+}
+
+.sv-talk2-quote--tl {
+    top: 10px;
+    left: 20px;
+}
+
+.sv-talk2-quote--br {
+    bottom: -45px;
+    right: 20px;
+}
+
+/* Headline */
+.sv-talk2-headline {
+    position: relative;
+    z-index: 1;
+    font-size: clamp(1.5rem, 3.8vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.22;
+    margin: 0 auto 16px;
+    text-transform: uppercase;
+}
+
+.sv-talk2-em {
+    color: #cdcdcd;
+}
+
+/* Subtext */
+.sv-talk2-sub {
+    position: relative;
+    z-index: 1;
+    color: var(--gray-500);
+    font-size: 0.96rem;
+    line-height: 1.8;
+    margin: 0 auto 36px;
+}
+
+/* Two CTA cards grid */
+.sv-talk2-cards {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 0;
+    max-width: 840px;
+    margin: auto;
+}
+
+/* Individual card */
+.sv-talk2-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 22px 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    text-decoration: none;
+    transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    text-align: left;
+}
+
+.sv-talk2-card:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.sv-talk2-card-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+/* Icon box */
+.sv-talk2-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.75);
+    flex-shrink: 0;
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.sv-talk2-card:hover .sv-talk2-icon {
+    background: rgba(255, 255, 255, 0.13);
+    border-color: rgba(255, 255, 255, 0.22);
+    color: #fff;
+}
+
+/* Card text */
+.sv-talk2-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sv-talk2-card-text strong {
+    font-size: 0.93rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.sv-talk2-card-text span {
+    font-size: 0.78rem;
+    color: var(--gray-500);
+    line-height: 1.5;
+}
+
+/* Arrow button */
+.sv-talk2-arrow {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.6);
+    flex-shrink: 0;
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.sv-talk2-card:hover .sv-talk2-arrow {
+    background: #fff;
+    border-color: #fff;
+    color: rgb(13 13 13);
+    transform: translateX(3px) scale(1.1);
+}
+
+
+
+
+/* ── RESPONSIVE ── */
+@media (max-width: 991px) {
+    .sv-hero {
+        /* min-height: auto; */
+        padding: 150px 0 60px;
+    }
+
+    .sv-hero-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .sv-hero-visual {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .sv-perks-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sv-faq-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .sv-faq-visual {
+        display: none;
+    }
+
+    .ssv-crumbs {
+        justify-content: center;
+    }
+
+    .sv-hero-copy {
+        text-align: center;
+    }
+
+    .sv-hero-lead {
+        max-width: max-content;
+    }
+
+    .sv-hero .hero-actions {
+        justify-content: center;
+
+    }
+
+    .sv-hero-visual--mobile {
+        margin-bottom: 40px;
+    }
+
+    .sv-hero-trust {
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .section_title {
+        margin-top: 35px;
+    }
+
+    .sv-faq-wrap {
+        margin-top: 20px;
+    }
+
+    .sv-talk2-quote--br {
+        bottom: -50px;
+        right: 12px;
+    }
+
+    .sv-perks-grid {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sv-hero {
+        padding: 130px 0 50px;
+    }
+
+    .sv-mock-badge {
+        display: none;
+    }
+
+    .sv-perks-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sv-talk-card {
+        padding: 46px 26px;
+        border-radius: 24px;
+    }
+
+    .sv-talk-quote {
+        font-size: 90px;
+    }
+
+    .sv-talk-actions {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .sv-eyebrow {
+        font-size: 0.64rem;
+        padding: 8px 16px;
+    }
+
+    .sv-talk-card2 {
+        padding: 40px 22px 36px;
+        border-radius: 20px;
+    }
+
+    .sv-talk2-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .sv-talk2-quote--br {
+        display: none;
+    }
+}
