@@ -482,15 +482,25 @@ nav.desktop-nav a:hover {
     margin-bottom: 24px;
     animation: fadeUp 0.8s 0.1s ease both;
     font-family: "Poppins", Sans-serif;
-    font-weight: 900;
+    font-weight: 800;
     text-transform: uppercase;
     color: #FFFFFF;
-    width: 650px;
+}
+
+.hero h1 strong {
+    display: block;
+}
+
+/* Keep each word on its own line even before Poppins loads (FOUT / GitHub Pages). */
+@media (min-width: 992px) {
+    .hero h1 strong {
+        word-spacing: 100vw;
+    }
 }
 
 .hero h1 strong:nth-child(1) {
     font-family: "Poppins", Sans-serif;
-    font-weight: 900;
+    font-weight: 800;
     text-transform: uppercase;
     -webkit-text-stroke-width: 1px;
     stroke-width: 1px;
@@ -3063,6 +3073,7 @@ section {
 
     .hero h1 strong {
         display: block;
+        word-spacing: normal;
     }
 
     .hero h1 strong:nth-child(2) {
