@@ -491,12 +491,12 @@ nav.desktop-nav a:hover {
     display: block;
 }
 
-/* Keep each word on its own line even before Poppins loads (FOUT / GitHub Pages). */
-@media (min-width: 992px) {
+
+/* @media (min-width: 992px) {
     .hero h1 strong {
         word-spacing: 100vw;
     }
-}
+} */
 
 .hero h1 strong:nth-child(1) {
     font-family: "Poppins", Sans-serif;
