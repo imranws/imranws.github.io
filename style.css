@@ -485,6 +485,7 @@ nav.desktop-nav a:hover {
     font-weight: 900;
     text-transform: uppercase;
     color: #FFFFFF;
+    width: fit-content;
 }
 
 .hero h1 strong:nth-child(1) {
