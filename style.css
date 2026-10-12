@@ -447,8 +447,6 @@ nav.desktop-nav a:hover {
 .hero-badge {
     animation: fadeUp 0.8s ease forwards;
     font-family: "Poppins", Sans-serif;
-    font-size: 23px;
-    font-weight: 200;
     text-transform: uppercase;
     color: #FFFFFFC9;
 }
