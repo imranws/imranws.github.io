@@ -2,12 +2,12 @@
    LOCAL POPPINS FONT
    ========================================================= */
 
-@font-face {
+   @font-face {
     font-family: 'Poppins';
     src: url('./fonts/Poppins-Thin.ttf') format('truetype');
-    font-weight: 00;
+    font-weight: 200;
     font-style: normal;
-    font-display: swap;
+    /* font-display: swap; */
 }
 
 @font-face {
@@ -15,7 +15,7 @@
     src: url('./fonts/Poppins-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
+    /* font-display: swap; */
 }
 
 @font-face {
@@ -31,7 +31,7 @@
     src: url('./fonts/Poppins-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
-    font-display: swap;
+    /* font-display: swap; */
 }
 
 @font-face {
@@ -39,7 +39,7 @@
     src: url('./fonts/Poppins-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
-    font-display: swap;
+    /* font-display: swap; */
 }
 
 @font-face {
@@ -47,7 +47,7 @@
     src: url('./fonts/Poppins-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
+    /* font-display: swap; */
 }
 
 @font-face {
@@ -55,7 +55,7 @@
     src: url('./fonts/Poppins-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
-    font-display: swap;
+    /* font-display: swap; */
 }
 
 
@@ -66,7 +66,7 @@
     src: url('./fonts/Poppins-Italic.ttf') format('truetype');
     font-weight: 400;
     font-style: italic;
-    font-display: swap;
+    /* font-display: swap; */
 }
 
 @font-face {
@@ -74,7 +74,7 @@
     src: url('./fonts/Poppins-MediumItalic.ttf') format('truetype');
     font-weight: 500;
     font-style: italic;
-    font-display: swap;
+    /* font-display: swap; */
 }
 
 @font-face {
@@ -82,7 +82,7 @@
     src: url('./fonts/Poppins-SemiBoldItalic.ttf') format('truetype');
     font-weight: 600;
     font-style: italic;
-    font-display: swap;
+    /* font-display: swap; */
 }
 
 /* Font end  */
