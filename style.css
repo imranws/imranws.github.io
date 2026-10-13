@@ -416,21 +416,7 @@ nav.desktop-nav a:hover {
 .hero .hero_right img:hover {}
 
 
-.hero_left {
-    opacity: 0;
-    animation: heroFadeInUp 0.7s ease-out 0.7s forwards;
-}
 
-@keyframes heroFadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 
 
