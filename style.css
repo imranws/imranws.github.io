@@ -2,11 +2,10 @@
    LOCAL POPPINS FONT
    ========================================================= */
 
-
 @font-face {
     font-family: 'Poppins';
-    src: url('./fonts/Poppins-Thin.ttf'('truetype');
-    font-weight: 200;
+    src: url('./fonts/Poppins-Thin.ttf') format('truetype');
+    font-weight: 00;
     font-style: normal;
     font-display: swap;
 }
