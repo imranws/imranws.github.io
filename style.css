@@ -402,6 +402,23 @@ nav.desktop-nav a:hover {
     padding-top: 80px;
 }
 
+
+.hero_left {
+    opacity: 0;
+    animation: heroFadeInUp 0.5s ease-out 0.7s forwards;
+}
+
+@keyframes heroFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero .hero_right {
     width: 45%;
     display: flex;
@@ -3078,22 +3095,6 @@ section {
         padding-bottom: 70px;
         max-width: 660px;
     }
-
-.hero_left {
-    opacity: 0;
-    animation: heroFadeInUp 0.7s ease-out 0.7s forwards;
-}
-
-@keyframes heroFadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
     .hero .hero_right img {
         width: 400px;
