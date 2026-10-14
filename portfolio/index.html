@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="icon" type="image/png" href="../favicon.png">
     <title>Portfolio | IMRAN Website Solutions</title>
     <meta name="description"
         content="Explore selected websites designed and developed by IMRAN Website Solutions for businesses, eCommerce brands and professionals.">
@@ -19,36 +19,28 @@
 </head>
 
 <body>
-
-    <!-- HEADER -->
     <header id="main-header">
-        <a href="index.html" class="logo"><strong>IMRAN</strong></a>
-
+        <a href="../" class="logo"><strong>IMRAN</strong></a>
         <nav class="desktop-nav">
-            <a href="index.html#home">Home</a>
-            <a href="index.html#about">About</a>
-            <a href="index.html#services">Services</a>
-            <a href="portfolio.html" class="active">Portfolio</a>
-            <a href="index.html#testimonials">Testimonials</a>
-            <a href="index.html#contact">Contact</a>
+            <a href="../">Home</a>
+            <a href="../#about">About</a>
+            <a href="../#services">Services</a>
+            <a href="../portfolio/" class="active">Portfolio</a>
+            <a href="../testimonials/">Testimonials</a>
         </nav>
-
         <div class="header-cta">
-            <a href="index.html#contact" class="btn-header">Free Consultation</a>
-            <button class="hamburger" id="hamburger" aria-label="Open menu">
-                <span></span><span></span><span></span>
-            </button>
+            <a href="../#contact" class="btn-header">Free Consultation</a>
+            <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </header>
 
     <!-- MOBILE NAV -->
     <nav class="mobile-nav" id="mobile-nav">
-        <a href="index.html#home" onclick="closeMobileNav()">Home</a>
-        <a href="index.html#about" onclick="closeMobileNav()">About</a>
-        <a href="index.html#services" onclick="closeMobileNav()">Services</a>
-        <a href="portfolio.html" onclick="closeMobileNav()">Portfolio</a>
-        <a href="index.html#testimonials" onclick="closeMobileNav()">Testimonials</a>
-        <a href="index.html#contact" onclick="closeMobileNav()">Contact</a>
+        <a href="../" onclick="closeMobileNav()">Home</a>
+        <a href="../#about" onclick="closeMobileNav()">About</a>
+        <a href="../#services" onclick="closeMobileNav()">Services</a>
+        <a href="../testimonials/" onclick="closeMobileNav()">Testimonials</a>
+        <a href="../#contact" onclick="closeMobileNav()">Contact</a>
     </nav>
 
     <main>
@@ -74,33 +66,66 @@
                         <button class="portfolio-filter active" data-filter="all">All</button>
                         <button class="portfolio-filter" data-filter="business">Business Website</button>
                         <button class="portfolio-filter" data-filter="ecommerce">eCommerce</button>
-                        <button class="portfolio-filter" data-filter="blog">Blog / News</button>
-                        <button class="portfolio-filter" data-filter="portfolio">Portfolio</button>
-                        <button class="portfolio-filter" data-filter="redesign">Redesign</button>
-                        <button class="portfolio-filter" data-filter="maintenance">Maintenance</button>
-                        <button class="portfolio-filter" data-filter="fixes">Website Fixes</button>
+                        <!-- <button class="portfolio-filter" data-filter="blog">Blog / News</button> -->
+                        <!-- <button class="portfolio-filter" data-filter="portfolio">Portfolio</button> -->
+                        <!-- <button class="portfolio-filter" data-filter="redesign">Redesign</button> -->
+                        <!-- <button class="portfolio-filter" data-filter="maintenance">Maintenance</button> -->
+                        <!-- <button class="portfolio-filter" data-filter="fixes">Website Fixes</button> -->
                     </div>
 
                     <span class="portfolio-count"><strong id="project-count">4</strong> Projects</span>
                 </div>
-
                 <div class="portfolio-grid" id="portfolio-grid">
 
                     <!-- PROJECT 01 -->
-                    <a href="project-holy-estates.html" class="portfolio-card reveal" data-category="business">
+                    <a href="https://qbpn.com/" class="portfolio-card reveal" data-category="business">
                         <div class="portfolio-card-image">
-                            <img src="img/th1.png" alt="Holy Estates website project" loading="lazy">
+                            <img src="../../../img/qbpn.webp" alt="QBPn website project" loading="lazy">
                             <span class="portfolio-card-arrow" aria-hidden="true">↗</span>
                         </div>
                         <div class="portfolio-card-content">
                             <span class="portfolio-category">Business Website</span>
-                            <h2>Holy Estates</h2>
-                            <p>Modern corporate website for a real estate business.</p>
+                            <h2>QBPn</h2>
+                            <p>Modern corporate website</p>
+                        </div>
+                    </a>
+                                        <!-- PROJECT 01 -->
+                    <a href="fashion/" class="portfolio-card reveal" data-category="ecommerce">
+                        <div class="portfolio-card-image">
+                            <img src="../../../img/fashion.webp" alt="Fashion Brand website project" loading="lazy">
+                            <span class="portfolio-card-arrow" aria-hidden="true">↗</span>
+                        </div>
+                        <div class="portfolio-card-content">
+                            <span class="portfolio-category">eCommerce</span>
+                            <h2>Fashion Brand</h2>
+                            <p>Modern corporate website for a fashion brand.</p>
+                        </div>
+                    </a>
+                    <a href="griho-olindo/" class="portfolio-card reveal" data-category="ecommerce">
+                        <div class="portfolio-card-image">
+                            <img src="../../../img/grihoolindo.webp" alt="Griho Olindo website project" loading="lazy">
+                            <span class="portfolio-card-arrow" aria-hidden="true">↗</span>
+                        </div>
+                        <div class="portfolio-card-content">
+                            <span class="portfolio-category">eCommerce</span>
+                            <h2>Griho Olindo</h2>
+                            <p>Modern corporate website for a custom furniture solution.</p>
+                        </div>
+                    </a>
+                    <a href="image-appeal/" class="portfolio-card reveal" data-category="ecommerce">
+                        <div class="portfolio-card-image">
+                            <img src="../../../img/image-appeal.webp" alt="Image Appeal website project" loading="lazy">
+                            <span class="portfolio-card-arrow" aria-hidden="true">↗</span>
+                        </div>
+                        <div class="portfolio-card-content">
+                            <span class="portfolio-category">eCommerce</span>
+                            <h2>Image Appeal</h2>
+                            <p>Modern corporate website for a digital marketing agency.</p>
                         </div>
                     </a>
 
                     <!-- PROJECT 02 -->
-                    <a href="project-qbpn.html" class="portfolio-card reveal reveal-delay-1" data-category="ecommerce">
+                    <!-- <a href="project-qbpn.html" class="portfolio-card reveal reveal-delay-1" data-category="ecommerce">
                         <div class="portfolio-card-image">
                             <img src="img/th8.png" alt="QBPN eCommerce website project" loading="lazy">
                             <span class="portfolio-card-arrow" aria-hidden="true">↗</span>
@@ -110,10 +135,10 @@
                             <h2>QBPN</h2>
                             <p>Online store designed for a clean shopping experience.</p>
                         </div>
-                    </a>
+                    </a> -->
 
                     <!-- PROJECT 03 -->
-                    <a href="project-james-stanley.html" class="portfolio-card reveal reveal-delay-2" data-category="portfolio">
+                    <!-- <a href="project-james-stanley.html" class="portfolio-card reveal reveal-delay-2" data-category="portfolio">
                         <div class="portfolio-card-image">
                             <img src="img/th3.png" alt="James Stanley portfolio website project" loading="lazy">
                             <span class="portfolio-card-arrow" aria-hidden="true">↗</span>
@@ -123,10 +148,10 @@
                             <h2>James Stanley</h2>
                             <p>Personal portfolio website with a focused presentation.</p>
                         </div>
-                    </a>
+                    </a> -->
 
                     <!-- PROJECT 04 -->
-                    <a href="project-04.html" class="portfolio-card reveal" data-category="business">
+                    <!-- <a href="project-04.html" class="portfolio-card reveal" data-category="business">
                         <div class="portfolio-card-image">
                             <img src="img/th10.png" alt="Website project preview" loading="lazy">
                             <span class="portfolio-card-arrow" aria-hidden="true">↗</span>
@@ -136,7 +161,7 @@
                             <h2>Featured Project</h2>
                             <p>A professional website built around the client's business goals.</p>
                         </div>
-                    </a>
+                    </a> -->
 
                 </div>
 
@@ -166,47 +191,55 @@
                 </div>
 
                 <div class="ts-video-row">
-
-                    <div class="ts-vcard ts-vcard--up" data-video-id="QBNyW4rfUPY">
-                        <div class="ts-thumb-wrap">
-                            <img class="ts-thumb"
-                                src="https://img.youtube.com/vi/QBNyW4rfUPY/mqdefault.jpg"
-                                alt="Client video testimonial" loading="lazy">
-                            <button class="ts-play" aria-label="Play testimonial video">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
-                                    <path d="M8 5.14v14l11-7-11-7z"/>
-                                </svg>
-                            </button>
-                        </div>
+                <div class="ts-vcard ts-vcard--up" data-video-id="STKqXZsF4sI">
+                    <div class="ts-thumb-wrap">
+                        <img class="ts-thumb" src="https://img.youtube.com/vi/STKqXZsF4sI/maxresdefault.jpg"
+                            alt="Testimonial video - Mohan" loading="lazy" />
+                        <div class="ts-overlay"></div>
+                        <button class="ts-play" aria-label="Play video">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                                <path d="M8 5.14v14l11-7-11-7z" />
+                            </svg>
+                        </button>
+                        <!-- <div class="ts-vcard-label">
+                            <p class="ts-vname">Mohan</p>
+                            <p class="ts-vrole">Consultancy Business Owner</p>
+                        </div> -->
                     </div>
-
-                    <div class="ts-vcard ts-vcard--mid" data-video-id="U9197Rx8Uc8">
-                        <div class="ts-thumb-wrap">
-                            <img class="ts-thumb"
-                                src="https://img.youtube.com/vi/U9197Rx8Uc8/mqdefault.jpg"
-                                alt="Client video testimonial" loading="lazy">
-                            <button class="ts-play" aria-label="Play testimonial video">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
-                                    <path d="M8 5.14v14l11-7-11-7z"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="ts-vcard ts-vcard--up" data-video-id="dQw4w9WgXcQ">
-                        <div class="ts-thumb-wrap">
-                            <img class="ts-thumb"
-                                src="https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg"
-                                alt="Client video testimonial" loading="lazy">
-                            <button class="ts-play" aria-label="Play testimonial video">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
-                                    <path d="M8 5.14v14l11-7-11-7z"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-
                 </div>
+                <div class="ts-vcard ts-vcard--up" data-video-id="QBNyW4rfUPY">
+                    <div class="ts-thumb-wrap">
+                        <img class="ts-thumb" src="https://img.youtube.com/vi/QBNyW4rfUPY/mqdefault.jpg"
+                            alt="Testimonial video - Chase Francis" loading="lazy" />
+                        <!-- <div class="ts-overlay"></div> -->
+                        <button class="ts-play" aria-label="Play video">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                                <path d="M8 5.14v14l11-7-11-7z" />
+                            </svg>
+                        </button>
+                        <!-- <div class="ts-vcard-label">
+                            <p class="ts-vname">Chase Francis</p>
+                            <p class="ts-vrole">CFGroove Digital Agency</p>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="ts-vcard ts-vcard--mid" data-video-id="U9197Rx8Uc8">
+                    <div class="ts-thumb-wrap">
+                        <img class="ts-thumb" src="https://img.youtube.com/vi/U9197Rx8Uc8/mqdefault.jpg"
+                            alt="Testimonial video - Maus" loading="lazy" />
+                        <!-- <div class="ts-overlay"></div> -->
+                        <button class="ts-play" aria-label="Play video">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                                <path d="M8 5.14v14l11-7-11-7z" />
+                            </svg>
+                        </button>
+                        <!-- <div class="ts-vcard-label">
+                            <p class="ts-vname">Maus</p>
+                            <p class="ts-vrole">Beat Valhalla</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
 
                 <div class="ts-cta show-phone">
                     <a href="https://www.fiverr.com/imran8858" target="_blank" rel="noopener noreferrer"
@@ -330,17 +363,16 @@
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <a href="index.html#home" class="footer-logo">IMRAN</a>
+                    <a href="../" class="footer-logo">IMRAN</a>
                     <p class="footer-text">Modern websites built to help brands, businesses and professionals grow
                         online.</p>
                 </div>
                 <div class="footer-links">
-                    <a href="index.html#about">About</a>
-                    <a href="index.html#services">Services</a>
-                    <a href="index.html#portfolio">Portfolio</a>
-                    <a href="testimonials.html">Testimonials</a>
+                    <a href="../#about">About</a>
+                    <a href="../#services">Services</a>
+                    <a href="../testimonials/">Testimonials</a>
                 </div>
-                <div class="footer-cta"><a href="index.html#contact" class="footer-btn">Free Consultation</a></div>
+                <div class="footer-cta"><a href="../#contact" class="footer-btn">Free Consultation</a></div>
             </div>
             <div class="footer-bottom">
                 <span>© 2026 Imran. All rights reserved.</span>
