@@ -3,251 +3,330 @@ const header = document.getElementById("main-header");
 
 if (header) {
     window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
+        header.classList.toggle("scrolled", window.scrollY > 50);
     });
 }
 
+
 // ── HAMBURGER MENU ──
-const hamburger = document.getElementById('hamburger');
-const mobileNav = document.getElementById('mobile-nav');
+const hamburger = document.getElementById("hamburger");
+const mobileNav = document.getElementById("mobile-nav");
 
 if (hamburger && mobileNav) {
-
-    // Open / close menu
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('open');
-        mobileNav.classList.toggle('open');
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("open");
+        mobileNav.classList.toggle("open");
 
         document.body.style.overflow =
-            mobileNav.classList.contains('open') ? 'hidden' : '';
+            mobileNav.classList.contains("open") ? "hidden" : "";
     });
 
-    // Close menu when a menu item is clicked
-    mobileNav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('open');
-            mobileNav.classList.remove('open');
-            document.body.style.overflow = '';
+    mobileNav.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            hamburger.classList.remove("open");
+            mobileNav.classList.remove("open");
+            document.body.style.overflow = "";
         });
     });
 }
 
+
 // ── SCROLL REVEAL ──
-const revealEls = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-        if (e.isIntersecting) {
-            e.target.classList.add('visible');
-            observer.unobserve(e.target);
-        }
-    });
-}, { threshold: 0.1 });
-revealEls.forEach(el => observer.observe(el));
+const revealEls = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    revealEls.forEach(el => observer.observe(el));
+} else {
+    revealEls.forEach(el => el.classList.add("visible"));
+}
+
 
 // ── PRICING TABS ──
 function switchPricing(type) {
-    document.getElementById('pricing-onetime').style.display = type === 'onetime' ? 'grid' : 'none';
-    document.getElementById('pricing-monthly').style.display = type === 'monthly' ? 'grid' : 'none';
-    document.querySelectorAll('.pricing-tab').forEach((btn, i) => {
-        btn.classList.toggle('active', (i === 0 && type === 'onetime') || (i === 1 && type === 'monthly'));
+    const oneTime = document.getElementById("pricing-onetime");
+    const monthly = document.getElementById("pricing-monthly");
+
+    if (!oneTime || !monthly) return;
+
+    oneTime.style.display = type === "onetime" ? "grid" : "none";
+    monthly.style.display = type === "monthly" ? "grid" : "none";
+
+    document.querySelectorAll(".pricing-tab").forEach((btn, i) => {
+        btn.classList.toggle(
+            "active",
+            (i === 0 && type === "onetime") ||
+            (i === 1 && type === "monthly")
+        );
     });
 }
 
 
 // ── BACK TO TOP BUTTON ──
-const backToTop = document.querySelector('.back-to-top');
+const backToTop = document.querySelector(".back-to-top");
 
 if (backToTop) {
-    window.addEventListener('scroll', () => {
-
-        if (window.scrollY >= 500) {
-            backToTop.classList.add('show');
-        } else {
-            backToTop.classList.remove('show');
-        }
-
+    window.addEventListener("scroll", () => {
+        backToTop.classList.toggle("show", window.scrollY >= 500);
     });
 }
 
 
-/* =============================================
-   reviews-modal.js
-   Fiverr Reviews popup — add to existing JS
-   ============================================= */
-
+// ── VIDEO & FIVERR REVIEWS MODALS ──
 (function () {
-    'use strict';
+    "use strict";
 
-    /* ── Video modal (existing) ── */
-    var tsModal = document.getElementById('tsModal');
-    var tsModalBg = document.getElementById('tsModalBg');
-    var tsClose = document.getElementById('tsModalClose');
-    var tsIframe = document.getElementById('tsIframe');
+    // Video modal
+    const tsModal = document.getElementById("tsModal");
+    const tsModalBg = document.getElementById("tsModalBg");
+    const tsClose = document.getElementById("tsModalClose");
+    const tsIframe = document.getElementById("tsIframe");
 
     function openVideo(id) {
-        tsIframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1';
-        tsModal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-        setTimeout(function () { tsClose.focus(); }, 280);
+        if (!tsModal || !tsIframe || !id) return;
+
+        tsIframe.src =
+            "https://www.youtube.com/embed/" +
+            encodeURIComponent(id) +
+            "?autoplay=1&rel=0&modestbranding=1";
+
+        tsModal.classList.add("open");
+        document.body.style.overflow = "hidden";
     }
+
     function closeVideo() {
-        tsModal.classList.remove('open');
-        document.body.style.overflow = '';
-        tsIframe.src = '';
+        if (!tsModal) return;
+
+        tsModal.classList.remove("open");
+        document.body.style.overflow = "";
+
+        if (tsIframe) tsIframe.src = "";
     }
 
-    if (tsModal) {
-        document.querySelectorAll('.ts-vcard').forEach(function (card) {
-            card.addEventListener('click', function () {
-                var id = card.dataset.videoId;
-                if (id) openVideo(id);
-            });
+    document.querySelectorAll(".ts-vcard").forEach(card => {
+        card.addEventListener("click", () => {
+            openVideo(card.dataset.videoId);
         });
-        tsModalBg.addEventListener('click', closeVideo);
-        tsClose.addEventListener('click', closeVideo);
-    }
-
-    /* ── Reviews modal ── */
-    var rvModal = document.getElementById('rvModal');
-    var rvBg = document.getElementById('rvModalBg');
-    var rvClose = document.getElementById('rvModalClose');
-
-    /* The Fiverr Reviews button — find by href or add id="fiverrReviewsBtn" */
-    var fiverrBtn = document.querySelector('.ts-fiverr-btn');
-
-    function openReviews(e) {
-        e.preventDefault();
-        rvModal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-        setTimeout(function () { rvClose.focus(); }, 280);
-    }
-    function closeReviews() {
-        rvModal.classList.remove('open');
-        document.body.style.overflow = '';
-    }
-
-    if (rvModal && fiverrBtn) {
-        fiverrBtn.addEventListener('click', openReviews);
-        rvBg.addEventListener('click', closeReviews);
-        rvClose.addEventListener('click', closeReviews);
-    }
-
-    /* Escape closes whichever modal is open */
-    document.addEventListener('keydown', function (e) {
-        if (e.key !== 'Escape') return;
-        if (tsModal && tsModal.classList.contains('open')) closeVideo();
-        if (rvModal && rvModal.classList.contains('open')) closeReviews();
     });
 
+    if (tsModalBg) {
+        tsModalBg.addEventListener("click", closeVideo);
+    }
+
+    if (tsClose) {
+        tsClose.addEventListener("click", closeVideo);
+    }
+
+
+    // Fiverr reviews modal
+    const rvModal = document.getElementById("rvModal");
+    const rvBg = document.getElementById("rvModalBg");
+    const rvClose = document.getElementById("rvModalClose");
+
+    // Supports either class or ID
+    const fiverrButtons = document.querySelectorAll(
+        ".ts-fiverr-btn, #fiverrReviewsBtn"
+    );
+
+    function openReviews(event) {
+        event.preventDefault();
+
+        if (!rvModal) {
+            console.error("Fiverr reviews modal #rvModal was not found.");
+            return;
+        }
+
+        rvModal.classList.add("open");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeReviews() {
+        if (!rvModal) return;
+
+        rvModal.classList.remove("open");
+        document.body.style.overflow = "";
+    }
+
+    fiverrButtons.forEach(button => {
+        button.addEventListener("click", openReviews);
+    });
+
+    if (rvBg) {
+        rvBg.addEventListener("click", closeReviews);
+    }
+
+    if (rvClose) {
+        rvClose.addEventListener("click", closeReviews);
+    }
+
+
+    // Close modals with Escape
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") {
+            if (tsModal && tsModal.classList.contains("open")) {
+                closeVideo();
+            }
+
+            if (rvModal && rvModal.classList.contains("open")) {
+                closeReviews();
+            }
+        }
+    });
 })();
+
 
 // ── VIDEO LAZY LOAD ──
 function loadVideo() {
-    const thumb = document.getElementById('video-thumb');
-    const container = document.getElementById('video-container');
-    const iframe = document.getElementById('yt-iframe');
-    // Replace with actual YouTube video ID
-    iframe.src = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1';
-    thumb.style.display = 'none';
-    container.style.display = 'block';
+    const thumb = document.getElementById("video-thumb");
+    const container = document.getElementById("video-container");
+    const iframe = document.getElementById("yt-iframe");
+
+    if (!thumb || !container || !iframe) return;
+
+    iframe.src =
+        "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
+
+    thumb.style.display = "none";
+    container.style.display = "block";
 }
+
 
 // ── CHAT WIDGET ──
 function toggleChat() {
-    const options = document.getElementById('chat-options');
-    const toggle = document.getElementById('chat-toggle');
-    options.classList.toggle('open');
-    toggle.classList.toggle('open');
+    const options = document.getElementById("chat-options");
+    const toggle = document.getElementById("chat-toggle");
+
+    if (!options || !toggle) return;
+
+    options.classList.toggle("open");
+    toggle.classList.toggle("open");
 }
 
-// ── FORM SUBMIT → WHATSAPP ──
-// function handleFormSubmit() {
-//     const inputs = document.querySelectorAll('.contact-form input, .contact-form select, .contact-form textarea');
-//     const name = inputs[0].value || 'অজানা';
-//     const phone = inputs[1].value || '';
-//     const service = inputs[2].value || '';
-//     const budget = inputs[3].value || '';
-//     const message = inputs[4].value || '';
-//     const text = `নমস্কার Imran ভাই! আমি আপনার ওয়েবসাইট থেকে যোগাযোগ করছি।%0A%0Aনাম: ${name}%0Aফোন: ${phone}%0Aসেবা: ${service}%0Aবাজেট: ${budget}%0Aবিস্তারিত: ${message}`;
-//     window.open(`https://wa.me/8801885078858?text=${text}`, '_blank');
-// }
 
-
+// ── FORM SUBMIT → EMAILJS ──
 function handleFormSubmit(e) {
+    if (e) e.preventDefault();
 
-    e.preventDefault();
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
+
+    if (!name || !email || !message) return;
+
+    if (typeof emailjs === "undefined") {
+        alert("Email service is not available. Please try again later.");
+        return;
+    }
 
     emailjs.send("service_99fglb5", "template_yz73d5r", {
-        from_name: document.getElementById("name").value,
-        from_email: document.getElementById("email").value,
-        message: document.getElementById("message").value,
+        from_name: name.value,
+        from_email: email.value,
+        message: message.value
     })
-        .then(() => {
-            alert("Message sent successfully!");
+    .then(() => {
+        alert("Message sent successfully!");
 
-            document.getElementById("name").value = "";
-            document.getElementById("email").value = "";
-            document.getElementById("message").value = "";
-        })
-        .catch((error) => {
-            alert("Failed to send message.");
-            console.log(error);
-        });
+        name.value = "";
+        email.value = "";
+        message.value = "";
+    })
+    .catch(error => {
+        alert("Failed to send message.");
+        console.error("EmailJS error:", error);
+    });
 }
 
+
 // ── BOTTOM NAV ACTIVE STATE ──
-const sections = document.querySelectorAll('section[id]');
-const bnavItems = document.querySelectorAll('.bnav-item');
-window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(sec => {
-        if (window.scrollY >= sec.offsetTop - 200) current = sec.id;
+const sections = document.querySelectorAll("section[id]");
+const bnavItems = document.querySelectorAll(".bnav-item");
+
+function updateBottomNav() {
+    let current = "";
+
+    sections.forEach(section => {
+        if (window.scrollY >= section.offsetTop - 200) {
+            current = section.id;
+        }
     });
+
     bnavItems.forEach(item => {
-        item.classList.remove('active');
-        if (item.getAttribute('href') === `#${current}`) item.classList.add('active');
+        item.classList.toggle(
+            "active",
+            item.getAttribute("href") === `#${current}`
+        );
     });
-});
+}
+
+if (bnavItems.length && sections.length) {
+    window.addEventListener("scroll", updateBottomNav, { passive: true });
+    updateBottomNav();
+}
+
 
 // ── SMOOTH SCROLL ──
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-        const target = document.querySelector(a.getAttribute('href'));
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", event => {
+        const href = link.getAttribute("href");
+
+        if (!href || href === "#") return;
+
+        const target = document.querySelector(href);
+
         if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            event.preventDefault();
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
         }
     });
 });
 
+
 // ── ANIMATED COUNTER ──
 function animateCounter(el, target, suffix) {
+    if (!el) return;
+
     let current = 0;
     const step = target / 60;
+
     const timer = setInterval(() => {
         current += step;
+
         if (current >= target) {
             current = target;
             clearInterval(timer);
         }
+
         el.textContent = Math.floor(current) + suffix;
     }, 25);
 }
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-        if (e.isIntersecting) {
-            const h3s = document.querySelectorAll('.hero-stat h3');
-            animateCounter(h3s[0], 120, '+');
-            animateCounter(h3s[1], 250, '+');
-            animateCounter(h3s[2], 8, '+');
-            // animateCounter(h3s[2], 119, '★');
-            statsObserver.disconnect();
-        }
-    });
-}, { threshold: 0.5 });
-const heroStats = document.querySelector('.hero-stats');
-if (heroStats) statsObserver.observe(heroStats);
+
+const heroStats = document.querySelector(".hero-stats");
+
+if (heroStats && "IntersectionObserver" in window) {
+    const statsObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counters = heroStats.querySelectorAll("h3");
+
+                animateCounter(counters[0], 120, "+");
+                animateCounter(counters[1], 250, "+");
+                animateCounter(counters[2], 8, "+");
+
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.5 });
+
+    statsObserver.observe(heroStats);
+}

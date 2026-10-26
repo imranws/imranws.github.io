@@ -427,7 +427,7 @@ nav.desktop-nav a:hover {
 }
 
 .hero .hero_right img {
-    animation: heroimgFadeIn 0.9s ease-out 0s forwards;
+    animation: heroimgFadeIn 1.9s ease-out 0s forwards;
 }
 
 
@@ -1582,6 +1582,8 @@ section {
     letter-spacing: 0.03em;
     text-decoration: none;
     transition: background 0.22s, border-color 0.22s, color 0.22s;
+    background: transparent;
+    cursor: pointer;
 }
 
 .ts-fiverr-btn:hover {
@@ -1879,7 +1881,7 @@ section {
 
 
 
-.ts-section .ts-cta.show-phone {
+.show-phone {
     display: none !important;
 }
 
@@ -1938,6 +1940,10 @@ section {
 /* ── Responsive video section ── */
 @media (max-width: 767px) {
 
+    .hero-container {
+        padding: 0 8px;
+    }
+
     .ts-cta {
         padding-top: 0px;
     }
@@ -1985,12 +1991,17 @@ section {
         padding: 24px 28px;
     }
 
-    .testi_top .ts-cta.show-pc {
+    .show-pc {
         display: none !important;
     }
 
-    .ts-section .ts-cta.show-phone {
+    .show-phone {
         display: block !important;
+    }
+
+    .pf-cta.show-phone {
+        text-align: center;
+        margin-top: 30px;
     }
 
 }
@@ -2744,7 +2755,7 @@ section {
 ========================= */
 
 .footer {
-    padding: 70px 24px 30px;
+    padding: 70px 15px 30px;
     background: #000;
     position: relative;
 }
