@@ -1,0 +1,652 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+
+<title>Imran Website Solutions | Digital Card</title>
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+:root {
+    --bg: #050608;
+    --glass: rgba(19, 22, 28, 0.72);
+    --glass-light: rgba(255,255,255,0.055);
+    --border: rgba(255,255,255,0.13);
+    --text: #f5f7fa;
+    --muted: #9ca3af;
+    --blue: #1685ff;
+    --blue-light: #55baff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 25px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    background:
+        radial-gradient(ellipse at 15% 20%, rgba(0,110,255,.13), transparent 40%),
+        radial-gradient(ellipse at 85% 80%, rgba(65,65,120,.13), transparent 40%),
+        #050608;
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Main Glass Card */
+
+.vcard {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: 205px 1fr;
+    gap: 27px;
+    padding: 29px;
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    background: linear-gradient(
+        135deg,
+        rgba(30,35,45,.76),
+        rgba(8,10,14,.84)
+    );
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.55),
+        inset 0 1px 1px rgba(255,255,255,.12);
+    overflow: hidden;
+    animation: cardEnter .7s ease both;
+}
+
+/* Glass highlights */
+
+.vcard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 0% 0%, rgba(0,140,255,.16), transparent 30%),
+        radial-gradient(circle at 100% 100%, rgba(0,90,255,.12), transparent 30%);
+}
+
+.vcard::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    right: -170px;
+    top: -180px;
+    border: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 0 50px rgba(0,120,255,.08);
+    pointer-events: none;
+}
+
+@keyframes cardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Left Profile */
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 26px;
+    border-right: 1px solid var(--border);
+}
+
+.profile-image {
+    width: 100%;
+    aspect-ratio: 1 / 1.12;
+    overflow: hidden;
+    border-radius: 17px;
+    border: 1px solid rgba(255,255,255,.25);
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+    background: #171b24;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s ease;
+}
+
+.profile-image:hover img {
+    transform: scale(1.045);
+}
+
+.profile-name {
+    position: relative;
+    padding-left: 16px;
+    margin-top: 21px;
+}
+
+.profile-name::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    bottom: 2px;
+    width: 3px;
+    border-radius: 5px;
+    background: linear-gradient(#1595ff, #0060dc);
+    box-shadow: 0 0 12px rgba(0,130,255,.6);
+}
+
+.profile-name h2 {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -.7px;
+}
+
+.profile-name p {
+    font-size: 14px;
+    color: #aeb9ca;
+    margin-top: 5px;
+}
+
+/* Right Content */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+}
+
+.heading {
+    margin-bottom: 19px;
+}
+
+.heading h1 {
+    font-size: clamp(23px, 3vw, 32px);
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+}
+
+.heading h1 span {
+    color: var(--blue-light);
+}
+
+.heading .subheading {
+    margin-top: 7px;
+    color: #8291a7;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.description {
+    color: #c4cbd5;
+    font-size: 13px;
+    line-height: 1.65;
+    max-width: 490px;
+}
+
+.accent-line {
+    width: 75px;
+    height: 4px;
+    margin: 16px 0 20px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #008aff, #54c2ff);
+    box-shadow: 0 0 12px rgba(0,135,255,.45);
+}
+
+/* Contact Buttons */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 9px;
+}
+
+.contact-link {
+    min-width: 0;
+    min-height: 82px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 13px;
+    border: 1px solid rgba(255,255,255,.12);
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.025)
+    );
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: .3s ease;
+}
+
+.contact-link i {
+    font-size: 23px;
+    transition: .3s ease;
+}
+
+.contact-link span {
+    font-size: 10px;
+    font-weight: 600;
+    color: #e5e7eb;
+    white-space: nowrap;
+}
+
+.contact-link:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,.10);
+    border-color: rgba(75,165,255,.5);
+    box-shadow: 0 8px 22px rgba(0,0,0,.25);
+}
+
+.contact-link:hover i {
+    transform: scale(1.13);
+}
+
+/* Individual Icon Colors */
+
+.call i { color: #f8fafc; }
+.whatsapp i { color: #25d366; }
+.email i { color: #f8fafc; }
+.website i { color: #269bff; }
+.facebook i { color: #1877f2; }
+.messenger i { color: #b56cff; }
+
+/* Save Contact */
+
+.save-area {
+    margin-top: 21px;
+}
+
+.save-button {
+    width: 100%;
+    min-height: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 14px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,.17),
+        rgba(255,255,255,.055)
+    );
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow:
+        inset 0 1px 1px rgba(255,255,255,.2),
+        0 7px 22px rgba(0,0,0,.25);
+    transition: .3s ease;
+}
+
+.save-button i {
+    font-size: 18px;
+}
+
+.save-button:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(20,120,255,.35),
+        rgba(255,255,255,.09)
+    );
+    border-color: rgba(80,175,255,.7);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0,100,255,.2);
+}
+
+.save-button:active {
+    transform: scale(.98);
+}
+
+/* Mobile Responsive */
+
+@media(max-width: 650px) {
+
+    body {
+        padding: 16px 10px;
+    }
+
+    .vcard {
+        max-width: 420px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px 16px;
+        border-radius: 21px;
+    }
+
+    .profile {
+        border: none;
+        padding: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 112px;
+        height: 112px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+    }
+
+    .profile-name {
+        margin-top: 13px;
+        padding: 0;
+    }
+
+    .profile-name::before {
+        display: none;
+    }
+
+    .profile-name h2 {
+        font-size: 24px;
+    }
+
+    .profile-name p {
+        font-size: 12px;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    .heading {
+        margin-bottom: 13px;
+    }
+
+    .heading h1 {
+        font-size: 24px;
+    }
+
+    .heading .subheading {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .description {
+        font-size: 12px;
+        margin: auto;
+    }
+
+    .accent-line {
+        margin: 13px auto 17px;
+        width: 55px;
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .contact-link {
+        min-height: 76px;
+        gap: 8px;
+        border-radius: 12px;
+    }
+
+    .contact-link i {
+        font-size: 21px;
+    }
+
+    .contact-link span {
+        font-size: 10px;
+    }
+
+    .save-area {
+        margin-top: 17px;
+    }
+
+    .save-button {
+        min-height: 53px;
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 340px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main class="vcard">
+
+    <!-- Profile Section -->
+
+    <section class="profile">
+
+        <div class="profile-image">
+            <img
+                src="https://imranws.github.io/imranWebDeveloper.png"
+                alt="Imran - Web Developer"
+            >
+        </div>
+
+        <div class="profile-name">
+            <h2>Imran</h2>
+            <p>Web Developer</p>
+        </div>
+
+    </section>
+
+
+    <!-- Main Content -->
+
+    <section class="content">
+
+        <header class="heading">
+            <h1>
+                Imran <span>Website Solutions</span>
+            </h1>
+
+            <p class="subheading">
+                Web Development Services
+            </p>
+        </header>
+
+        <p class="description">
+            Helping businesses build a strong online presence
+            with modern and professional websites.
+        </p>
+
+        <div class="accent-line"></div>
+
+
+        <!-- Contact Links -->
+
+        <div class="contact-grid">
+
+            <a class="contact-link call"
+               href="tel:+8801775078858"
+               aria-label="Call Imran">
+
+                <i class="fa-solid fa-phone"></i>
+                <span>Call</span>
+
+            </a>
+
+
+            <a class="contact-link whatsapp"
+               href="https://wa.me/8801775078858"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="WhatsApp">
+
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp</span>
+
+            </a>
+
+
+            <a class="contact-link email"
+               href="mailto:imu.coder@gmail.com"
+               aria-label="Email">
+
+                <i class="fa-regular fa-envelope"></i>
+                <span>Email</span>
+
+            </a>
+
+
+            <a class="contact-link website"
+               href="https://imranws.github.io/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Website">
+
+                <i class="fa-solid fa-globe"></i>
+                <span>Website</span>
+
+            </a>
+
+
+            <a class="contact-link facebook"
+               href="https://www.facebook.com/al.imran.coder/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Facebook Profile">
+
+                <i class="fa-brands fa-facebook"></i>
+                <span>Facebook</span>
+
+            </a>
+
+
+            <a class="contact-link messenger"
+               href="https://m.me/al.imran.coder"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Messenger">
+
+                <i class="fa-brands fa-facebook-messenger"></i>
+                <span>Messenger</span>
+
+            </a>
+
+        </div>
+
+
+        <!-- Save Contact -->
+
+        <div class="save-area">
+
+            <button
+                type="button"
+                class="save-button"
+                onclick="downloadContact()"
+            >
+
+                <i class="fa-regular fa-address-card"></i>
+
+                <span>Save Contact to Phone</span>
+
+                <i class="fa-solid fa-download"></i>
+
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script>
+
+function downloadContact() {
+
+    const contact = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'FN:Imran Website Solutions',
+        'N:Solutions;Imran Website;;;',
+        'ORG:Imran Website Solutions',
+        'TITLE:Web Developer',
+        'TEL;TYPE=CELL,VOICE:+8801775078858',
+        'EMAIL;TYPE=INTERNET:imu.coder@gmail.com',
+        'URL:https://imranws.github.io/',
+        'URL;TYPE=Facebook:https://www.facebook.com/al.imran.coder/',
+        'URL;TYPE=WhatsApp:https://wa.me/8801775078858',
+        'URL;TYPE=Messenger:https://m.me/al.imran.coder',
+        'PHOTO;VALUE=URI:https://imranws.github.io/imranWebDeveloper.png',
+        'NOTE:Helping businesses build a strong online presence with modern and professional websites.',
+        'END:VCARD'
+    ].join('\r\n') + '\r\n';
+
+    const blob = new Blob(
+        [contact],
+        { type: 'text/vcard;charset=utf-8' }
+    );
+
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+
+    link.href = url;
+    link.download = 'Imran-Website-Solutions.vcf';
+
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    setTimeout(() => {
+        URL.revokeObjectURL(url);
+    }, 1500);
+
+}
+
+</script>
+
+</body>
+</html>
